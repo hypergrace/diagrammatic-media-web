@@ -4,6 +4,8 @@ layout: project.njk
 date: 2021-09-01
 title: SloMoCo
 subtitle: a 9-month durational conference gathering, microresidency, and publication
+header: slomoco.jpg
+projecttags: "movement-and-computing,organizational-praxis,speculative-design"
 ---
 
 [SloMoCo](https://slo.movementcomputing.org/index.html) is permanently archived by Movement and Computing.

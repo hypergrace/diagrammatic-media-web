@@ -5,6 +5,7 @@ layout: project.njk
 year: 2020-22
 date: 2022-01-01
 subtitle: Media Arts and Sciences PhD Dissertation
+projecttags: "research,dissertation,media-theory,ecology,phd"
 ---
 
 I defended my practice-informed dissertation in December 2022. The committee consisted of mathematician and media arts researcher Sha Xin Wei (chair), philosopher of science Adam J. Nocek, and experimental electronics performer and theorist Lauren Sarah Hayes.

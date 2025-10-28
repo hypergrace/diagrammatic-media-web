@@ -3,6 +3,8 @@ layout: project.njk
 title: thermal economies
 year: 2018
 date: 2018-01-01
+projecttags: "alternative-economies,responsive-media,workshop"
+
 ---
 
 ### experiential responsive media research

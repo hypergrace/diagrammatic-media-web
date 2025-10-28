@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Alien Screamer Workshop
+title: Alien Screamer Synth + Workshop
 date: 2024-04-01
 year: 2024
 tags: project

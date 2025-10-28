@@ -1,0 +1,130 @@
+{% comment %} Photo Gallery Module - Liquid Version Usage: {% assign
+gallery_images = "image1.jpg,image2.jpg,image3.jpg" | split: "," %} {% assign
+gallery_alts = "Alt 1,Alt 2,Alt 3" | split: "," %} {% assign gallery_captions =
+"Caption 1,Caption 2,Caption 3" | split: "," %} {% assign gallery_columns = 3 %}
+{% include "gallery-liquid.njk" %} {% endcomment %} {% assign gallery_id =
+"gallery-" | append: site.time | append: forloop.index0 | default:
+"gallery-default" %} {% assign columns = gallery_columns | default: 3 %}
+
+<div class="photo-gallery" data-columns="{{ columns }}">
+  <div class="gallery-grid" id="{{ gallery_id }}">
+    {% for image in gallery_images %} {% assign alt =
+    gallery_alts[forloop.index0] | default: "Gallery image" %} {% assign caption
+    = gallery_captions[forloop.index0] %}
+    <div class="gallery-item">
+      <img
+        src="/assets/img/{{ image }}"
+        alt="{{ alt }}"
+        loading="lazy"
+        class="gallery-image"
+        onclick="openLightbox('{{ gallery_id }}', {{ forloop.index0 }})"
+      />
+      {% if caption and caption != "" %}
+      <div class="gallery-caption">{{ caption }}</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div
+  id="{{ gallery_id }}-lightbox"
+  class="lightbox-overlay"
+  onclick="closeLightbox('{{ gallery_id }}')"
+>
+  <div class="lightbox-container">
+    <span class="lightbox-close" onclick="closeLightbox('{{ gallery_id }}')"
+      >&times;</span
+    >
+    <img
+      id="{{ gallery_id }}-lightbox-img"
+      class="lightbox-image"
+      src=""
+      alt=""
+    />
+    <div id="{{ gallery_id }}-lightbox-caption" class="lightbox-caption"></div>
+    <div class="lightbox-nav">
+      <button
+        class="lightbox-prev"
+        onclick="navigateLightbox('{{ gallery_id }}', -1)"
+      >
+        &#8249;
+      </button>
+      <button
+        class="lightbox-next"
+        onclick="navigateLightbox('{{ gallery_id }}', 1)"
+      >
+        &#8250;
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Gallery functionality for {{ gallery_id }}
+  (function() {
+    const galleryData = [
+      {% for image in gallery_images %}
+        {
+          src: "/assets/img/{{ image }}",
+          alt: "{{ gallery_alts[forloop.index0] | default: 'Gallery image' | escape }}",
+          caption: "{{ gallery_captions[forloop.index0] | escape }}"
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
+    let currentImageIndex = 0;
+
+    window.openLightbox = window.openLightbox || function(galleryId, index) {
+      if (galleryId !== '{{ gallery_id }}') return;
+
+      currentImageIndex = index;
+      const lightbox = document.getElementById(galleryId + '-lightbox');
+      const img = document.getElementById(galleryId + '-lightbox-img');
+      const caption = document.getElementById(galleryId + '-lightbox-caption');
+
+      img.src = galleryData[index].src;
+      img.alt = galleryData[index].alt;
+      caption.textContent = galleryData[index].caption || '';
+
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.closeLightbox = window.closeLightbox || function(galleryId) {
+      if (galleryId !== '{{ gallery_id }}') return;
+
+      const lightbox = document.getElementById(galleryId + '-lightbox');
+      lightbox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    };
+
+    window.navigateLightbox = window.navigateLightbox || function(galleryId, direction) {
+      if (galleryId !== '{{ gallery_id }}') return;
+
+      currentImageIndex += direction;
+
+      if (currentImageIndex < 0) {
+        currentImageIndex = galleryData.length - 1;
+      } else if (currentImageIndex >= galleryData.length) {
+        currentImageIndex = 0;
+      }
+
+      openLightbox(galleryId, currentImageIndex);
+    };
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      const lightbox = document.getElementById('{{ gallery_id }}-lightbox');
+      if (lightbox && lightbox.style.display === 'flex') {
+        if (e.key === 'Escape') {
+          closeLightbox('{{ gallery_id }}');
+        } else if (e.key === 'ArrowLeft') {
+          navigateLightbox('{{ gallery_id }}', -1);
+        } else if (e.key === 'ArrowRight') {
+          navigateLightbox('{{ gallery_id }}', 1);
+        }
+      }
+    });
+  })();
+</script>

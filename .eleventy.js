@@ -40,6 +40,26 @@ module.exports = function (eleventyConfig) {
   }
   eleventyConfig.addPlugin(pluginSEO, seo);
 
+  // Add collection to generate hashtag list
+  eleventyConfig.addCollection("hashtagList", function (collectionApi) {
+    const projects = collectionApi.getFilteredByTag("project");
+    const allHashtags = new Set();
+
+    projects.forEach((project) => {
+      if (project.data.projecttags) {
+        const tags = project.data.projecttags.split(",");
+        tags.forEach((tag) => {
+          const cleanTag = tag.trim();
+          if (cleanTag) {
+            allHashtags.add(cleanTag);
+          }
+        });
+      }
+    });
+
+    return Array.from(allHashtags).sort();
+  });
+
   return {
     dir: {
       input: "src",

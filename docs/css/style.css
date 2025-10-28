@@ -1,10 +1,272 @@
+/* ===== AZERET FONT COLLECTION ===== */
+/* Azeret Sans - Primary font family for body text */
+@font-face {
+  font-family: "Azeret";
+  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Light.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Light.ttf")
+      format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret";
+  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-LightItalic.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-LightItalic.ttf")
+      format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret";
+  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret";
+  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-RegularItalic.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-RegularItalic.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret";
+  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Medium.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Medium.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret";
+  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-MediumItalic.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-MediumItalic.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret";
+  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-SemiBold.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret";
+  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Bold.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Azeret Mono - Secondary font family for headers and monospace elements */
+@font-face {
+  font-family: "Azeret Mono";
+  src: url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Light.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Light.ttf")
+      format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret Mono";
+  src: url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret Mono";
+  src: url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Medium.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Medium.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret Mono";
+  src: url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-SemiBold.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret Mono";
+  src: url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Bold.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Azeret Semi Mono - Alternative monospace for variety */
+@font-face {
+  font-family: "Azeret Semi Mono";
+  src: url("../assets/fonts/Azeret/Azeret SemiMono/AzeretSemiMono-TRIAL-Regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret SemiMono/AzeretSemiMono-TRIAL-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret Semi Mono";
+  src: url("../assets/fonts/Azeret/Azeret SemiMono/AzeretSemiMono-TRIAL-Medium.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret SemiMono/AzeretSemiMono-TRIAL-Medium.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret Semi Mono";
+  src: url("../assets/fonts/Azeret/Azeret SemiMono/AzeretSemiMono-TRIAL-SemiBold.woff2")
+      format("woff2"),
+    url("../assets/fonts/Azeret/Azeret SemiMono/AzeretSemiMono-TRIAL-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== COLOR SYSTEM ===== */
+:root {
+  /* Primary Color Scheme - Dark Purple */
+  /* --primary-color: #6f2dbd;
+  --primary-hover: #1b065e;
+  --background-color: #232121;
+  --text-color: #f5eccd;
+  --secondary-bg: #1a1a1a;
+  --accent-color: #5bc3eb; */
+
+  /* Alternative Color Schemes (uncomment to switch) */
+
+  /*  */
+  --primary-color: #a42cd6;
+  --primary-hover: #37ff8b;
+  --background-color: #000001;
+  --text-color: #efe9e7;
+  --secondary-bg: #000001;
+  --accent-color: ;
+
+  /* Forest Green Theme 
+  --primary-color: #27ae60;
+  --primary-hover: #16a085;
+  --background-color: #1a252f;
+  --text-color: #ecf0f1;
+  --secondary-bg: #2c3e50;
+  --accent-color: #f39c12;
+  */
+
+  /* Sunset Theme 
+  --primary-color: #e74c3c;
+  --primary-hover: #c0392b;
+  --background-color: #2c1810;
+  --text-color: #f8f9fa;
+  --secondary-bg: #3d2817;
+  --accent-color: #f39c12;
+  */
+}
+
+/* ===== FONT SYSTEM ===== */
+:root {
+  /* Font Scheme 1 - Azeret Collection (New Default) */
+  --primary-font: "Azeret", "Golos Text", system-ui, sans-serif;
+  --secondary-font: "Azeret Mono", "Major Mono Display", monospace;
+
+  /* Font Scheme 2 - Azeret Semi Mono Mix 
+  --primary-font: "Azeret", "Golos Text", system-ui, sans-serif;
+  --secondary-font: "Azeret Semi Mono", "Major Mono Display", monospace;
+  */
+
+  /* Font Scheme 3 - Original Modern Mix 
+  --primary-font: "Golos Text", system-ui, sans-serif;
+  --secondary-font: "Major Mono Display", monospace;
+  */
+
+  /* Font Scheme 4 - Classic Serif 
+  --primary-font: "Georgia", serif;
+  --secondary-font: "Monaco", "Azeret Mono", monospace;
+  */
+
+  /* Font Scheme 5 - Sans Serif Clean 
+  --primary-font: "Helvetica Neue", "Azeret", Arial, sans-serif;
+  --secondary-font: "Courier New", "Azeret Mono", monospace;
+  */
+
+  /* Font Scheme 6 - Futura Modern 
+  --primary-font: "Futura", "Azeret", "Trebuchet MS", sans-serif;
+  --secondary-font: "SF Mono", "Azeret Mono", Monaco, monospace;
+  */
+}
+
+/* ===== FONT WEIGHT SYSTEM ===== */
+:root {
+  /* Typography hierarchy using Azeret's available weights */
+  --font-weight-light: 300; /* Light text, captions */
+  --font-weight-normal: 400; /* Body text, paragraphs */
+  --font-weight-medium: 500; /* Emphasized text, buttons */
+  --font-weight-semibold: 600; /* Subheadings, important elements */
+  --font-weight-bold: 700; /* Main headings, strong emphasis */
+}
+
 body {
-  font-size: 26pt;
+  font-size: 14pt;
   margin-left: 5%;
   margin-right: 5%;
-  font-family: "Golos Text";
-  background-color: #232121;
-  color: #f5eccd;
+  font-family: var(--primary-font);
+  font-weight: var(--font-weight-normal);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 #vimeo {
@@ -15,55 +277,549 @@ iframe {
   padding-top: 16pt;
 }
 
+/* ===== HEADER IMAGE SYSTEM ===== */
 .header {
   padding-top: 5pt;
+  margin-bottom: 2rem;
 }
 
-main {
+.header img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.header img:hover {
+  transform: scale(1.02);
+}
+
+/* Desktop responsive rules */
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header img {
+    max-height: 60vh; /* Limit height to 60% of viewport height */
+    width: auto; /* Let width adjust to maintain aspect ratio */
+    max-width: 100%; /* Don't exceed container width */
+    object-fit: contain; /* Maintain aspect ratio within bounds */
+  }
+  
+  /* Special handling for very tall/portrait images */
+  .header img[src*="portrait"], 
+  .header img[style*="aspect-ratio: 1"], 
+  .header img {
+    max-height: 50vh; /* More conservative for tall images */
+  }
+  
+  /* Special handling for very wide/landscape images */
+  .header img[src*="landscape"] {
+    max-height: 70vh; /* Allow more height for wide images */
+    max-width: 90%; /* But limit width slightly */
+  }
+}/* Large desktop - even more conservative heights */
+@media (min-width: 1200px) {
+  .header img {
+    max-height: 50vh; /* Even smaller on large screens */
+  }
+}
+
+/* Mobile - keep full width behavior */
+@media (max-width: 767px) {
+  .header img {
+    max-height: 40vh; /* Reasonable height on mobile */
+    object-fit: cover; /* Cover the area on mobile */
+  }
+}
+
+/* Header spacer for pages without images */
+.header-spacer {
+  padding: 20pt 0;
 }
 
 button {
-  background-color: #232121;
-  font-size: xx-large;
+  background-color: var(--background-color);
+  font-size: x-large;
 }
 
 a {
-  color: #6f2dbd;
-  font-size: xx-large;
-  transition-duration: 500ms;
-  /* color: ; */
-}
-
-a:hover {
-  /* color: #5bc3eb; */
-  color: #1b065e;
-  font-size: xxx-large;
-  transition-duration: 500ms;
+  color: var(--primary-color);
+  transition-duration: 100ms;
 }
 
 #links.a {
-  color: #6f2dbd;
-  font-size: xx-large;
-  transition-duration: 1000ms;
-  /* color: ; */
+  color: var(--primary-color);
+  transition-duration: 100ms;
 }
 
 a:hover {
   /* color: #5bc3eb; */
-  color: #1b065e;
-  font-size: xxx-large;
-  transition-duration: 500ms;
+  color: var(--primary-hover);
+  transition-duration: 100ms;
 }
 
 /* a:visited {
   color: #1b065e;
 } */
 
-h1,
-h2,
+/* ===== NAVIGATION ACTIVE STATE ===== */
+.links a.nav-active {
+  color: var(--primary-hover);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.links a.nav-active:hover {
+  color: var(--primary-hover);
+  transform: none;
+}
+
+/* Special handling for home link in h1 */
+.links h1 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links h1 a.nav-active {
+  color: var(--primary-hover);
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+.links h1 a:hover {
+  color: var(--primary-color);
+}
+
+h1 {
+  font-family: var(--secondary-font);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  font-family: var(--secondary-font);
+  font-weight: var(--font-weight-semibold);
+}
+
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Major Mono Display";
+  font-family: var(--secondary-font);
+  font-weight: var(--font-weight-medium);
 }
+
+/* Project tiles grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.project-tile {
+  background-color: var(--secondary-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  border: 1px solid #404040;
+}
+
+.project-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(111, 45, 189, 0.3);
+}
+
+.project-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.project-link:hover {
+  color: inherit;
+  font-size: inherit;
+}
+
+.project-image {
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--primary-hover) 100%
+  );
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: var(--font-weight-bold);
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-family: var(--secondary-font);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+}
+
+.project-subtitle {
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-light);
+  color: #cccccc;
+  margin: 0 0 1rem 0;
+  font-style: italic;
+}
+
+.project-description {
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.project-meta {
+  margin-top: auto;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 0.3rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.tag:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Hashtag filters */
+.hashtag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+.hashtag-filter {
+  background-color: #404040;
+  color: var(--text-color);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-family: var(--secondary-font);
+}
+
+.hashtag-filter:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.hashtag-filter.active {
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(111, 45, 189, 0.4);
+}
+
+.project-tile.hidden {
+  display: none;
+}
+
+.filter-toggle {
+  margin-bottom: 1rem;
+}
+
+.filter-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.filter-toggle input[type="checkbox"] {
+  accent-color: #6f2dbd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-image {
+    height: 150px;
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+
+  .hashtag-filters {
+    gap: 0.5rem;
+  }
+
+  .hashtag-filter {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Photo Gallery Styles */
+.photo-gallery {
+  margin: 2rem 0;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Fix for Liquid template paragraph wrapping */
+.gallery-grid > p {
+  margin: 0;
+  padding: 0;
+  display: contents;
+}
+
+/* Column configurations */
+.photo-gallery[data-columns="2"] .gallery-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.photo-gallery[data-columns="3"] .gallery-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.photo-gallery[data-columns="4"] .gallery-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--secondary-bg);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: var(--text-color);
+  padding: 1rem;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+
+/* Lightbox Styles */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-container {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: var(--text-color);
+  font-size: 3rem;
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+  color: var(--primary-color);
+}
+
+.lightbox-caption {
+  color: var(--text-color);
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  pointer-events: none;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  background: rgba(111, 45, 189, 0.7);
+  color: var(--text-color);
+  border: none;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  pointer-events: all;
+  transition: background-color 0.3s ease;
+}
+
+.lightbox-prev {
+  margin-left: -60px;
+}
+
+.lightbox-next {
+  margin-right: -60px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: var(--primary-color);
+}
+
+/* Responsive gallery adjustments */
+@media (max-width: 768px) {
+  .photo-gallery[data-columns="3"] .gallery-grid,
+  .photo-gallery[data-columns="4"] .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-image {
+    height: 150px;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .lightbox-prev {
+    margin-left: -50px;
+  }
+
+  .lightbox-next {
+    margin-right: -50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-gallery[data-columns="2"] .gallery-grid,
+  .photo-gallery[data-columns="3"] .gallery-grid,
+  .photo-gallery[data-columns="4"] .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-caption {
+    position: static;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: -4px;
+  }
+}
+
+/* ===== THEME SWITCHING GUIDE =====
+ *
+ * To switch themes, uncomment one of the alternative color schemes 
+ * at the top of this file in the :root section and comment out the current one.
+ *
+ * Available themes:
+ * - Dark Purple (default/current)
+ * - Warm Orange 
+ * - Cool Blue
+ * - Forest Green
+ * - Sunset
+ *
+ * All colors throughout the site will automatically update!
+ */
