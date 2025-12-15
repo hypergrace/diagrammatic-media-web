@@ -2,3 +2,5 @@ build
 node_modules
 web_modules
 .plugin-clean
+docs/artsad_resume/index.html
+src/_includes/artsad_resume_data.njk
