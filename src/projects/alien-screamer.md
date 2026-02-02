@@ -5,6 +5,7 @@ date: 2024-04-01
 year: 2024
 tags: project
 header: alien-screamer2.jpg
+series: learning praxis
 ---
 
 I designed PCBs based on a schematic design by Ray Wilson. The intention of the workshop was to introduce beginners to DIY synth-making with hands on soldering and live performance at the end.

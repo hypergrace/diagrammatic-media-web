@@ -5,6 +5,7 @@ layout: project.njk
 tags: project
 year: 2015-16
 projecttags: "experimental-music,ensemble,ambient,live-processing"
+series: "music without organs"
 ---
 
 Gulch was a dark ambient improvisation trio based in Phoenix Arizona from 2015-2016.

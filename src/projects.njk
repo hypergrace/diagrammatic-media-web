@@ -52,8 +52,9 @@ cleanTag not in uniqueHashtags -%} {%- set uniqueHashtags =
         {%- endif -%}
 
         <div class="project-description">
-          {%- set description = post.templateContent | striptags | truncate(150)
-          -%}
+          {%- set rawDesc = (post.templateContent | striptags).trim() -%}
+          {%- set fallback = post.data.subtitle or post.data.excerpt or post.data.title -%}
+          {%- set description = (rawDesc or fallback) | truncate(150) -%}
           {{ description }}
         </div>
 
@@ -61,12 +62,14 @@ cleanTag not in uniqueHashtags -%} {%- set uniqueHashtags =
           <div class="project-tags">
             {%- if post.data.year -%}
             <span class="tag">#{{ post.data.year }}</span>
-            {%- endif -%} {%- if post.data.projecttags -%} {%- set tagArray =
-            post.data.projecttags.split(',') -%} {%- for tag in tagArray -%}
-            <span class="tag" data-hashtag="{{ tag.trim() }}"
-              >#{{ tag.trim() }}</span
-            >
-            {%- endfor -%} {%- endif -%}
+            {%- endif -%}
+            {%- if post.data.projecttags -%}
+            {%- set tagArray = post.data.projecttags.split(',') -%}
+            {%- for tag in tagArray -%}
+              {%- set t = tag.trim() -%}
+              <a class="tag" href="/projects/{{ t | slug }}/">#{{ t }}</a>{% if not loop.last %}, {% endif %}
+            {%- endfor -%}
+            {%- endif -%}
           </div>
         </div>
       </div>

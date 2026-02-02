@@ -191,12 +191,12 @@
   /* Alternative Color Schemes (uncomment to switch) */
 
   /*  */
-  --primary-color: #a42cd6;
-  --primary-hover: #37ff8b;
-  --background-color: #000001;
-  --text-color: #efe9e7;
-  --secondary-bg: #000001;
-  --accent-color: ;
+  --primary-color: #000000;
+  --primary-hover: #333333;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --secondary-bg: #ffffff;
+  --accent-color: #000000;
 
   /* Forest Green Theme 
   --primary-color: #27ae60;
@@ -217,11 +217,81 @@
   */
 }
 
+/* Simple two-pane layout styles */
+.simple-shell { display:flex; height:100vh; }
+.simple-left {
+  width:320px;
+  min-width:260px;
+  background: #f7f7f7;
+  padding: 36px 28px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.simple-right { flex:1; padding:40px; overflow:auto; }
+
+.simple-left nav {
+  margin:0 0 1rem 0;
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+.simple-left nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.simple-left nav a:hover {
+  text-decoration: underline;
+}
+
+.simple-left h2 {
+  margin:0 0 1rem 0;
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+.series-heading {
+  margin:18px 0 6px 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.85);
+}
+.series-list { list-style:none; padding-left:0; margin:0 0 12px 0; }
+.series-list li { margin:6px 0; }
+.series-list a {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-decoration-color: #cfcfcf;
+  display:block;
+  padding:4px 6px;
+  border-left: 3px solid transparent;
+}
+.series-list a:hover {
+  color: var(--text-color);
+  border-left-color: var(--primary-color);
+  background: #efefef;
+  text-decoration-color: #000000;
+}
+.series-list li a::before { color: rgba(0,0,0,0.45); margin-right:6px; }
+
+.hashtags a { color: var(--primary-color); text-decoration:none; margin-right:6px; }
+
+/* Responsive: left pane collapses under 720px */
+@media (max-width: 720px) {
+  .simple-shell { display:block; }
+  .simple-left { width:100%; min-width:unset; border-bottom:1px solid rgba(255,255,255,0.03); }
+  .simple-right { padding:20px; }
+}
+
 /* ===== FONT SYSTEM ===== */
 :root {
   /* Font Scheme 1 - Azeret Collection (New Default) */
-  --primary-font: "Azeret", "Golos Text", system-ui, sans-serif;
-  --secondary-font: "Azeret Mono", "Major Mono Display", monospace;
+  --primary-font: "Menlo", "Courier New", "Monaco", monospace;
+  --secondary-font: "Menlo", "Courier New", monospace;
 
   /* Font Scheme 2 - Azeret Semi Mono Mix 
   --primary-font: "Azeret", "Golos Text", system-ui, sans-serif;
@@ -275,6 +345,26 @@ body {
 
 iframe {
   padding-top: 16pt;
+}
+
+/* Responsive YouTube/Video Embeds */
+.youtube-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+.youtube-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 0;
+  border: none;
 }
 
 /* ===== HEADER IMAGE SYSTEM ===== */
@@ -350,8 +440,12 @@ button {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--text-color);
   transition-duration: 100ms;
+  text-decoration: underline;
+  text-decoration-color: #cfcfcf;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 #links.a {
@@ -360,8 +454,9 @@ a {
 }
 
 a:hover {
-  /* color: #5bc3eb; */
   color: var(--primary-hover);
+  text-decoration-color: #000000;
+  text-decoration-thickness: 1px;
   transition-duration: 100ms;
 }
 
@@ -522,16 +617,16 @@ h6 {
 }
 
 .tag {
-  background-color: var(--primary-color);
+  background: transparent;
   color: var(--text-color);
-  padding: 0.3rem 0.6rem;
-  border-radius: 15px;
-  font-size: 0.7rem;
-  font-weight: 500;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.9rem;
+  font-weight: normal;
 }
 
 .tag:hover {
-  background-color: var(--primary-hover);
+  text-decoration: underline;
 }
 
 /* Hashtag filters */

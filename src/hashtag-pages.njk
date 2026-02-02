@@ -4,64 +4,28 @@ pagination:
   size: 1
   alias: hashtag
 permalink: "/projects/{{ hashtag | slug }}/"
-layout: base.njk
+layout: simple.njk
 eleventyComputed:
-  title: "Projects tagged with #{{ hashtag }}"
+  title: "#{{ hashtag }}"
 ---
 
-<h1>{{ title | upper }}</h1>
+<h2>#{{ hashtag }}</h2>
 
-<p><a href="/projects/">&larr; Back to all projects</a></p>
-
-<div class="projects-grid">
-  {%- for project in collections.project | reverse -%} {%- if
-  project.data.projecttags -%} {%- set tagArray =
-  project.data.projecttags.split(',') -%} {%- set cleanTags = [] -%} {%- for tag
-  in tagArray -%} {%- set cleanTags = (cleanTags.push(tag.trim()), cleanTags)
-  -%} {%- endfor -%} {%- if hashtag in cleanTags -%}
-  <div class="project-tile">
-    <a href="{{ project.url }}" class="project-link">
-      <div class="project-image">
-        {%- if project.data.header -%}
-        <img
-          src="/assets/headers/{{ project.data.header }}"
-          alt="{{ project.data.title }}"
-          loading="lazy"
-        />
-        {%- else -%}
-        <div class="project-placeholder">
-          <span>{{ project.data.title | truncate(2, true, "") | upper }}</span>
-        </div>
-        {%- endif -%}
-      </div>
-
-      <div class="project-content">
-        <h3 class="project-title">{{ project.data.title }}</h3>
-
-        {%- if project.data.subtitle -%}
-        <p class="project-subtitle">{{ project.data.subtitle }}</p>
-        {%- endif -%}
-
-        <div class="project-description">
-          {%- set description = project.templateContent | striptags |
-          truncate(150) -%}
-          {{ description }}
-        </div>
-
-        <div class="project-meta">
-          <div class="project-tags">
-            {%- if project.data.year -%}
-            <span class="tag">#{{ project.data.year }}</span>
-            {%- endif -%} {%- if project.data.projecttags -%} {%- set tagArray =
-            project.data.projecttags.split(',') -%} {%- for tag in tagArray -%}
-            <span class="tag" data-hashtag="{{ tag.trim() }}"
-              >#{{ tag.trim() }}</span
-            >
-            {%- endfor -%} {%- endif -%}
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-  {%- endif -%} {%- endif -%} {%- endfor -%}
-</div>
+<ul>
+  {%- for project in collections.project -%}
+    {%- if project.data.projecttags -%}
+      {%- set tagArray = project.data.projecttags.split(',') -%}
+      {%- set cleanTags = [] -%}
+      {%- for tag in tagArray -%}
+        {%- set cleanTags = (cleanTags.push(tag.trim()), cleanTags) -%}
+      {%- endfor -%}
+      {%- if hashtag in cleanTags -%}
+        <li>
+          <a href="{{ project.url }}">{{ project.data.title }}</a>
+          {%- if project.data.year %} ({{ project.data.year }}){% endif -%}
+          {%- if project.data.subtitle %} — {{ project.data.subtitle }}{% endif -%}
+        </li>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+</ul>

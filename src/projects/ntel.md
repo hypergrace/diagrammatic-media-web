@@ -6,6 +6,7 @@ date: 2020-01-01
 collaborators: Sha Xin Wei, Kenneth Mims, Mirka Koro, Anani Vasquez, Tim Wells
 layout: project.njk
 projecttags: "research,education,collaboration,neurodiversity,technology,pedagogy"
+series: learning praxis
 ---
 
 In 2020 I assembled a group of learning science PhDs to work begin research and experimentation in "at-home" learning environments. We worked with the Science Prep Academy, a Phoenix middle and high school geared towards STEM for autistic youth and their siblings.

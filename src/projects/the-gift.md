@@ -5,7 +5,8 @@ layout: project.njk
 tags: project
 year: 2020
 projecttags: "alternate-economies, workshop, responsive-media, collaboration, performance"
-header: gift1.png
+header: gift1.
+series: "altereco and tactical finance"
 collaborators: Muindi Fanuel Muindi, Ylfa Muindi, Brandon Mechtley
 ---
 

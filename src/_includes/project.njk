@@ -1,10 +1,26 @@
 ---
-layout: base.njk
+layout: simple.njk
 tags: project
+
 ---
-<p style = "text-align:right"> {{subtitle }} ({{ year }}) </p>
-{%if collaborators%}
-<p style = "text-align:right; text-size:l">collaboration with: {{collaborators}}</p>
-{%endif %}
-{{content | safe }}
+<div>
+	{% if projecttags %}
+		<p>
+			{%- set tagArray = projecttags.split(',') -%}
+			{%- for tag in tagArray -%}
+				{%- set cleanTag = tag.trim() -%}
+				<a href="/projects/{{ cleanTag | slug }}/">#{{ cleanTag }}</a>{% if not loop.last %}, {% endif %}
+			{%- endfor -%}
+		</p>
+	{% endif %}
+	<h1>{{ title }}</h1>
+	<p style="text-align:right">{{ subtitle }} ({{ year }})</p>
+	{% if collaborators %}
+		<p style="text-align:right">collaboration with: {{ collaborators }}</p>
+	{% endif %}
+
+	<article>
+		{{ content | linkifyHashtags | safe }}
+	</article>
+</div>
 

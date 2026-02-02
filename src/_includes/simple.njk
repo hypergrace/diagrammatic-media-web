@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title or "Projects" }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- layout-specific styles are in src/css/style.css -->
+  </head>
+  <body>
+    <div class="simple-shell">
+      <aside class="simple-left">
+        <nav>
+          <a href="/">home</a> | <a href="/about/">about</a>
+        </nav>
+        <h2>Series</h2>
+        {%- set manualSeriesOrder = ["sigilistic perception","music without organs","alter-informatics and diagrammatic media", "textural embodiments", "socioaesthetic events", "altereco and tactical finance"] -%}
+        {%- set seriesOrder = [] -%}
+        {%- for s in manualSeriesOrder -%}
+          {%- set seriesOrder = (seriesOrder.push(s), seriesOrder) -%}
+        {%- endfor -%}
+        {%- for p in collections.project -%}
+          {%- set s = p.data.series or 'Misc' -%}
+          {%- if s not in seriesOrder -%}
+            {%- set seriesOrder = (seriesOrder.push(s), seriesOrder) -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- for s in seriesOrder -%}
+          <div class="series-heading">{{ s }}</div>
+          <ol class="series-list">
+            {%- set counter = 0 -%}
+            {%- for p in collections.project -%}
+              {%- if (p.data.series or 'Misc') == s -%}
+                {%- set counter = counter + 1 -%}
+                <li><a href="{{ p.url }}">{{ counter }}. {{ p.data.title }}{% if p.data.year %} ({{ p.data.year }}){% endif %}</a></li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ol>
+        {%- endfor -%}
+      </aside>
+
+      <main class="simple-right">
+        {%- if page.url == '/' or page.url == '/index.html' -%}
+          {%- for item in collections.all -%}
+            {%- if item.inputPath.includes('now.md') -%}
+              <div class="now-section">
+                {{ item.templateContent | linkifyHashtags | safe }}
+                <h2><a href="/before/">BEFORE</h2></p>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- set allTags = [] -%}
+          {%- for p in collections.project -%}
+            {%- if p.data.projecttags -%}
+              {%- set parts = p.data.projecttags.split(',') -%}
+              {%- for t in parts -%}
+                {%- set clean = t.trim() -%}
+                {%- if clean and clean not in allTags -%}
+                  {%- set allTags = (allTags.push(clean), allTags) -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          <div class="hashtags">
+            {%- for t in allTags -%}
+              <a href="/projects/{{ t | slug }}/">#{{ t }}</a>{% if not loop.last %}, {% endif %}
+            {%- endfor -%}
+          </div>
+        {%- else -%}
+          {{ content | safe }}
+        {%- endif -%}
+      </main>
+    </div>
+  </body>
+</html>
