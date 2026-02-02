@@ -1,10 +1,123 @@
 ---
 layout: base.njk
-title: PROJECTS
+title: Projects
 ---
 
-<ul>
-{%- for post in collections.project | reverse -%}
-  <li><a href = {{post.url}}>{{ post.data.title }}</a> | {{post.data.year}}</li>
-{%- endfor -%}
-</ul>
+{%- set uniqueHashtags = [] -%} {%- for post in collections.project -%} {%- if
+post.data.projecttags -%} {%- set tagArray = post.data.projecttags.split(',')
+-%} {%- for hashtag in tagArray -%} {%- set cleanTag = hashtag.trim() -%} {%- if
+cleanTag not in uniqueHashtags -%} {%- set uniqueHashtags =
+(uniqueHashtags.push(cleanTag), uniqueHashtags) -%} {%- endif -%} {%- endfor -%}
+{%- endif -%} {%- endfor -%} {%- set uniqueHashtags = uniqueHashtags | sort -%}
+
+<div class="hashtag-filters">
+  <button class="hashtag-filter active" data-filter="all">ALL</button>
+  {%- for hashtag in uniqueHashtags -%}
+  <button
+    class="hashtag-filter"
+    data-filter="{{ hashtag }}"
+    onclick="window.location.href='/projects/{{ hashtag | slug }}/'"
+  >
+    {{ hashtag | upper }}
+  </button>
+  {%- endfor -%}
+</div>
+
+<div class="projects-grid" id="projects-grid">
+  {%- for post in collections.project | reverse -%}
+  <div
+    class="project-tile"
+    data-hashtags="{%- if post.data.projecttags -%}{{ post.data.projecttags }}{%- endif -%}"
+  >
+    <a href="{{ post.url }}" class="project-link">
+      <div class="project-image">
+        {%- if post.data.header -%}
+        <img
+          src="/assets/headers/{{ post.data.header }}"
+          alt="{{ post.data.title }}"
+          loading="lazy"
+        />
+        {%- else -%}
+        <div class="project-placeholder">
+          <span>{{ post.data.title | truncate(2, true, "") | upper }}</span>
+        </div>
+        {%- endif -%}
+      </div>
+
+      <div class="project-content">
+        <h3 class="project-title">{{ post.data.title }}</h3>
+
+        {%- if post.data.subtitle -%}
+        <p class="project-subtitle">{{ post.data.subtitle }}</p>
+        {%- endif -%}
+
+        <div class="project-description">
+          {%- set rawDesc = (post.templateContent | striptags).trim() -%}
+          {%- set fallback = post.data.subtitle or post.data.excerpt or post.data.title -%}
+          {%- set description = (rawDesc or fallback) | truncate(150) -%}
+          {{ description }}
+        </div>
+
+        <div class="project-meta">
+          <div class="project-tags">
+            {%- if post.data.year -%}
+            <span class="tag">#{{ post.data.year }}</span>
+            {%- endif -%}
+            {%- if post.data.projecttags -%}
+            {%- set tagArray = post.data.projecttags.split(',') -%}
+            {%- for tag in tagArray -%}
+              {%- set t = tag.trim() -%}
+              <a class="tag" href="/projects/{{ t | slug }}/">#{{ t }}</a>{% if not loop.last %}, {% endif %}
+            {%- endfor -%}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  {%- endfor -%}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.hashtag-filter');
+      const projectTiles = document.querySelectorAll('.project-tile');
+      const clientFilterToggle = document.getElementById('client-filter-toggle');
+
+      filterButtons.forEach(button => {
+          button.addEventListener('click', function(e) {
+              const filter = this.getAttribute('data-filter');
+
+              // If client-side filtering is enabled, prevent navigation and filter locally
+              if (clientFilterToggle.checked) {
+                  e.preventDefault();
+                  e.stopPropagation();
+
+                  // Update active button
+                  filterButtons.forEach(btn => btn.classList.remove('active'));
+                  this.classList.add('active');
+
+                  // Filter projects
+                  projectTiles.forEach(tile => {
+                      if (filter === 'all') {
+                          tile.classList.remove('hidden');
+                      } else {
+                          const tileHashtags = tile.getAttribute('data-hashtags');
+                          if (tileHashtags) {
+                              const tagArray = tileHashtags.split(',').map(tag => tag.trim());
+                              if (tagArray.includes(filter)) {
+                                  tile.classList.remove('hidden');
+                              } else {
+                                  tile.classList.add('hidden');
+                              }
+                          } else {
+                              tile.classList.add('hidden');
+                          }
+                      }
+                  });
+              }
+              // Otherwise, let the onclick handler navigate to the static page
+          });
+      });
+  });
+</script>

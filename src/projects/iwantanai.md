@@ -6,9 +6,9 @@ date: 2024-02-01
 collaborators: Kristin McWharter
 year: 2024
 header: iwantanai.jpg
+projecttags: "performance,larp,collaboration"
+series: "institutional analysis"
 ---
-
-~_~_~_work in progress~_~_~_
 
 “I Want an AI for President” is a new experimental live action role play (LARP) / immersive theater piece that dives into the complexities of workplace leadership and evolving anxieties surrounding artificial intelligence and the automation of labor. The work is currently conceived as a participatory performance for 4-25 audience members in which audience members perform as decision makers within a fictional organization.
 

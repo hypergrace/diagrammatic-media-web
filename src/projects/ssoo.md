@@ -5,6 +5,7 @@ subtitle: experimental arts festival
 year: 2015
 collaborators: Matthews Briggs
 date: 2015-05-01
+series: "socioaesthetic events"
 ---
 
 In May 2015, digital fabricator and designer Matthew Briggs created the experimental arts and performance festival SSOO [something said only once] as a way of creating exchange between the fledgling arts scenes in the not-so-distant cities of Flagstaff and Phoenix. We met four Fridays in a row with artists gleaned from a call for proposals for workshops, performances, installations, wall work, and more.

@@ -1,0 +1,31 @@
+---
+pagination:
+  data: collections.hashtagList
+  size: 1
+  alias: hashtag
+permalink: "/projects/{{ hashtag | slug }}/"
+layout: simple.njk
+eleventyComputed:
+  title: "#{{ hashtag }}"
+---
+
+<h2>#{{ hashtag }}</h2>
+
+<ul>
+  {%- for project in collections.project -%}
+    {%- if project.data.projecttags -%}
+      {%- set tagArray = project.data.projecttags.split(',') -%}
+      {%- set cleanTags = [] -%}
+      {%- for tag in tagArray -%}
+        {%- set cleanTags = (cleanTags.push(tag.trim()), cleanTags) -%}
+      {%- endfor -%}
+      {%- if hashtag in cleanTags -%}
+        <li>
+          <a href="{{ project.url }}">{{ project.data.title }}</a>
+          {%- if project.data.year %} ({{ project.data.year }}){% endif -%}
+          {%- if project.data.subtitle %} — {{ project.data.subtitle }}{% endif -%}
+        </li>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+</ul>

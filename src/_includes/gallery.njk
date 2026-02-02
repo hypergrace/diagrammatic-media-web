@@ -1,0 +1,121 @@
+{# Photo Gallery Module Usage: {% include "gallery.njk", { images: [ { src:
+"/assets/img/photo1.jpg", alt: "Description 1", caption: "Optional caption" }, {
+src: "/assets/img/photo2.jpg", alt: "Description 2" }, { src:
+"/assets/img/photo3.jpg", alt: "Description 3", caption: "Another caption" } ],
+columns: 3 } %} Parameters: - images: array of image objects with src, alt, and
+optional caption - columns: number of columns (2, 3, or 4) - defaults to 3 #}
+{%- set galleryColumns = columns or 3 -%} {%- set galleryId = "gallery-" +
+(range(1000, 9999) | random) -%}
+
+<div class="photo-gallery" data-columns="{{ galleryColumns }}">
+  <div class="gallery-grid" id="{{ galleryId }}">
+    {%- for image in images -%}
+    <div class="gallery-item">
+      <img
+        src="{{ image.src }}"
+        alt="{{ image.alt or 'Gallery image' }}"
+        loading="lazy"
+        class="gallery-image"
+        onclick="openLightbox('{{ galleryId }}', {{ loop.index0 }})"
+      />
+      {%- if image.caption -%}
+      <div class="gallery-caption">{{ image.caption }}</div>
+      {%- endif -%}
+    </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div
+  id="{{ galleryId }}-lightbox"
+  class="lightbox-overlay"
+  onclick="closeLightbox('{{ galleryId }}')"
+>
+  <div class="lightbox-container">
+    <span class="lightbox-close" onclick="closeLightbox('{{ galleryId }}')"
+      >&times;</span
+    >
+    <img
+      id="{{ galleryId }}-lightbox-img"
+      class="lightbox-image"
+      src=""
+      alt=""
+    />
+    <div id="{{ galleryId }}-lightbox-caption" class="lightbox-caption"></div>
+    <div class="lightbox-nav">
+      <button
+        class="lightbox-prev"
+        onclick="navigateLightbox('{{ galleryId }}', -1)"
+      >
+        &#8249;
+      </button>
+      <button
+        class="lightbox-next"
+        onclick="navigateLightbox('{{ galleryId }}', 1)"
+      >
+        &#8250;
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Gallery functionality for {{ galleryId }}
+  (function() {
+    const galleryData = {{ images | dump | safe }};
+    let currentImageIndex = 0;
+
+    window.openLightbox = window.openLightbox || function(galleryId, index) {
+      if (galleryId !== '{{ galleryId }}') return;
+
+      currentImageIndex = index;
+      const lightbox = document.getElementById(galleryId + '-lightbox');
+      const img = document.getElementById(galleryId + '-lightbox-img');
+      const caption = document.getElementById(galleryId + '-lightbox-caption');
+
+      img.src = galleryData[index].src;
+      img.alt = galleryData[index].alt || 'Gallery image';
+      caption.textContent = galleryData[index].caption || '';
+
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.closeLightbox = window.closeLightbox || function(galleryId) {
+      if (galleryId !== '{{ galleryId }}') return;
+
+      const lightbox = document.getElementById(galleryId + '-lightbox');
+      lightbox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    };
+
+    window.navigateLightbox = window.navigateLightbox || function(galleryId, direction) {
+      if (galleryId !== '{{ galleryId }}') return;
+
+      currentImageIndex += direction;
+
+      if (currentImageIndex < 0) {
+        currentImageIndex = galleryData.length - 1;
+      } else if (currentImageIndex >= galleryData.length) {
+        currentImageIndex = 0;
+      }
+
+      openLightbox(galleryId, currentImageIndex);
+    };
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      const lightbox = document.getElementById('{{ galleryId }}-lightbox');
+      if (lightbox.style.display === 'flex') {
+        if (e.key === 'Escape') {
+          closeLightbox('{{ galleryId }}');
+        } else if (e.key === 'ArrowLeft') {
+          navigateLightbox('{{ galleryId }}', -1);
+        } else if (e.key === 'ArrowRight') {
+          navigateLightbox('{{ galleryId }}', 1);
+        }
+      }
+    });
+  })();
+</script>

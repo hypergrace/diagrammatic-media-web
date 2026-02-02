@@ -5,13 +5,13 @@ layout: project.njk
 year: 2020-22
 date: 2022-01-01
 subtitle: Media Arts and Sciences PhD Dissertation
+projecttags: "research,dissertation,media-theory,ecology,phd"
+series: alter-informatics and diagrammatic media
 ---
 
 I defended my practice-informed dissertation in December 2022. The committee consisted of mathematician and media arts researcher Sha Xin Wei (chair), philosopher of science Adam J. Nocek, and experimental electronics performer and theorist Lauren Sarah Hayes.
 
 Leonardo Journal's peer-review has recognized my dissertation abstract as a top submission to their [abstract database](https://leonardo.info/graduate-abstracts?gad_source=1&gclid=CjwKCAjwl6-3BhBWEiwApN6_kn8blU9qdZp0qEBIsouYt4SSTRcvjpxzVoBjVI4HgpV_U5gTUt3VixoCOkUQAvD_BwE) and will be printed in their late 2024 publication.
-
-I am currently looking for a position that would allow me to turn my dissertation into a book project.
 
 The document is open access [here](https://keep.lib.asu.edu/items/171591).
 
