@@ -9,3 +9,6 @@ header: ptl1.jpg
 series: "sigilistic perception"
 
 ---
+
+{% youtube "imncDuGJrL8" %}
+
