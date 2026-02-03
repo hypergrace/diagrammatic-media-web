@@ -8,8 +8,13 @@
     <!-- layout-specific styles are in src/css/style.css -->
   </head>
   <body>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="simple-shell">
-      <aside class="simple-left">
+      <aside class="simple-left" id="sidebar">
         <nav>
           <a href="/">home</a> | <a href="/about/">about</a>
         </nav>
@@ -57,7 +62,7 @@
         alt="Gift1"
         loading="lazy"
         class="gallery-image"
-        onclick="openLightbox('auto-gallery-the-gift', 0)"
+        onclick="window['openLightbox_auto-gallery-the-gift'](0)"
       />
 <div class="gallery-caption">
 Gift1
@@ -69,7 +74,7 @@ Gift1
         alt="Gift2"
         loading="lazy"
         class="gallery-image"
-        onclick="openLightbox('auto-gallery-the-gift', 1)"
+        onclick="window['openLightbox_auto-gallery-the-gift'](1)"
       />
 <div class="gallery-caption">
 Gift2
@@ -81,7 +86,7 @@ Gift2
         alt="Gift3"
         loading="lazy"
         class="gallery-image"
-        onclick="openLightbox('auto-gallery-the-gift', 2)"
+        onclick="window['openLightbox_auto-gallery-the-gift'](2)"
       />
 <div class="gallery-caption">
 Gift3
@@ -93,7 +98,7 @@ Gift3
         alt="River1"
         loading="lazy"
         class="gallery-image"
-        onclick="openLightbox('auto-gallery-the-gift', 3)"
+        onclick="window['openLightbox_auto-gallery-the-gift'](3)"
       />
 <div class="gallery-caption">
 River1
@@ -105,7 +110,7 @@ River1
         alt="River2"
         loading="lazy"
         class="gallery-image"
-        onclick="openLightbox('auto-gallery-the-gift', 4)"
+        onclick="window['openLightbox_auto-gallery-the-gift'](4)"
       />
 <div class="gallery-caption">
 River2
@@ -117,7 +122,7 @@ River2
         alt="River3"
         loading="lazy"
         class="gallery-image"
-        onclick="openLightbox('auto-gallery-the-gift', 5)"
+        onclick="window['openLightbox_auto-gallery-the-gift'](5)"
       />
 <div class="gallery-caption">
 River3
@@ -129,10 +134,10 @@ River3
 <div
   id="auto-gallery-the-gift-lightbox"
   class="lightbox-overlay"
-  onclick="closeLightbox('auto-gallery-the-gift')"
+  onclick="window['closeLightbox_auto-gallery-the-gift']()"
 >
-  <div class="lightbox-container">
-    <span class="lightbox-close" onclick="closeLightbox('auto-gallery-the-gift')"
+  <div class="lightbox-container" onclick="event.stopPropagation()">
+    <span class="lightbox-close" onclick="window['closeLightbox_auto-gallery-the-gift']()"
       >&times;</span
     >
     <img
@@ -145,15 +150,15 @@ River3
     <div class="lightbox-nav">
       <button
         class="lightbox-prev"
-        onclick="navigateLightbox('auto-gallery-the-gift', -1)"
+        onclick="event.stopPropagation(); window['navigateLightbox_auto-gallery-the-gift'](-1)"
       >
-        &<a href="/projects/8249/">#8249</a>;
+        &lt;
       </button>
       <button
         class="lightbox-next"
-        onclick="navigateLightbox('auto-gallery-the-gift', 1)"
+        onclick="event.stopPropagation(); window['navigateLightbox_auto-gallery-the-gift'](1)"
       >
-        &<a href="/projects/8250/">#8250</a>;
+        &gt;
       </button>
     </div>
   </div>
@@ -161,6 +166,7 @@ River3
 <script>
   // Auto Gallery functionality for auto-gallery-the-gift
   (function() {
+    const galleryId = 'auto-gallery-the-gift';
     const galleryData = [
       
         {
@@ -202,9 +208,8 @@ River3
     ];
     let currentImageIndex = 0;
 
-    window.openLightbox = window.openLightbox || function(galleryId, index) {
-      if (galleryId !== 'auto-gallery-the-gift') return;
-
+    // Create unique function names for this gallery
+    window['openLightbox_' + galleryId] = function(index) {
       currentImageIndex = index;
       const lightbox = document.getElementById(galleryId + '-lightbox');
       const img = document.getElementById(galleryId + '-lightbox-img');
@@ -218,17 +223,13 @@ River3
       document.body.style.overflow = 'hidden';
     };
 
-    window.closeLightbox = window.closeLightbox || function(galleryId) {
-      if (galleryId !== 'auto-gallery-the-gift') return;
-
+    window['closeLightbox_' + galleryId] = function() {
       const lightbox = document.getElementById(galleryId + '-lightbox');
       lightbox.style.display = 'none';
       document.body.style.overflow = 'auto';
     };
 
-    window.navigateLightbox = window.navigateLightbox || function(galleryId, direction) {
-      if (galleryId !== 'auto-gallery-the-gift') return;
-
+    window['navigateLightbox_' + galleryId] = function(direction) {
       currentImageIndex += direction;
 
       if (currentImageIndex < 0) {
@@ -237,19 +238,19 @@ River3
         currentImageIndex = 0;
       }
 
-      openLightbox(galleryId, currentImageIndex);
+      window['openLightbox_' + galleryId](currentImageIndex);
     };
 
     // Keyboard navigation
     document.addEventListener('keydown', function(e) {
-      const lightbox = document.getElementById('auto-gallery-the-gift-lightbox');
+      const lightbox = document.getElementById(galleryId + '-lightbox');
       if (lightbox && lightbox.style.display === 'flex') {
         if (e.key === 'Escape') {
-          closeLightbox('auto-gallery-the-gift');
+          window['closeLightbox_' + galleryId]();
         } else if (e.key === 'ArrowLeft') {
-          navigateLightbox('auto-gallery-the-gift', -1);
+          window['navigateLightbox_' + galleryId](-1);
         } else if (e.key === 'ArrowRight') {
-          navigateLightbox('auto-gallery-the-gift', 1);
+          window['navigateLightbox_' + galleryId](1);
         }
       }
     });
@@ -261,5 +262,24 @@ River3
 
 </main>
     </div>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const sidebar = document.getElementById('sidebar');
+      
+      hamburger.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+      
+      // Close sidebar when clicking outside on mobile
+      document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+            sidebar.classList.remove('active');
+            hamburger.classList.remove('active');
+          }
+        }
+      });
+    </script>
   </body>
 </html>

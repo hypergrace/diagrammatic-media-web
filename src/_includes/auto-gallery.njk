@@ -15,7 +15,7 @@ project_folder %} {% assign columns = gallery_columns | default: 3 %}
         alt="{{ image.name | replace: '-', ' ' | replace: '_', ' ' | capitalize }}"
         loading="lazy"
         class="gallery-image"
-        onclick="openLightbox('{{ gallery_id }}', {{ forloop.index0 }})"
+        onclick="window['openLightbox_{{ gallery_id }}']({{ forloop.index0 }})"
       />
       <div class="gallery-caption">
         {{ image.name | replace: '-', ' ' | replace: '_', ' ' | capitalize }}
@@ -29,10 +29,10 @@ project_folder %} {% assign columns = gallery_columns | default: 3 %}
 <div
   id="{{ gallery_id }}-lightbox"
   class="lightbox-overlay"
-  onclick="closeLightbox('{{ gallery_id }}')"
+  onclick="window['closeLightbox_{{ gallery_id }}']()"
 >
-  <div class="lightbox-container">
-    <span class="lightbox-close" onclick="closeLightbox('{{ gallery_id }}')"
+  <div class="lightbox-container" onclick="event.stopPropagation()">
+    <span class="lightbox-close" onclick="window['closeLightbox_{{ gallery_id }}']()"
       >&times;</span
     >
     <img
@@ -45,15 +45,15 @@ project_folder %} {% assign columns = gallery_columns | default: 3 %}
     <div class="lightbox-nav">
       <button
         class="lightbox-prev"
-        onclick="navigateLightbox('{{ gallery_id }}', -1)"
+        onclick="event.stopPropagation(); window['navigateLightbox_{{ gallery_id }}'](-1)"
       >
-        &#8249;
+        &lt;
       </button>
       <button
         class="lightbox-next"
-        onclick="navigateLightbox('{{ gallery_id }}', 1)"
+        onclick="event.stopPropagation(); window['navigateLightbox_{{ gallery_id }}'](1)"
       >
-        &#8250;
+        &gt;
       </button>
     </div>
   </div>
@@ -62,6 +62,7 @@ project_folder %} {% assign columns = gallery_columns | default: 3 %}
 <script>
   // Auto Gallery functionality for {{ gallery_id }}
   (function() {
+    const galleryId = '{{ gallery_id }}';
     const galleryData = [
       {% for image in project_images %}
         {
@@ -73,9 +74,8 @@ project_folder %} {% assign columns = gallery_columns | default: 3 %}
     ];
     let currentImageIndex = 0;
 
-    window.openLightbox = window.openLightbox || function(galleryId, index) {
-      if (galleryId !== '{{ gallery_id }}') return;
-
+    // Create unique function names for this gallery
+    window['openLightbox_' + galleryId] = function(index) {
       currentImageIndex = index;
       const lightbox = document.getElementById(galleryId + '-lightbox');
       const img = document.getElementById(galleryId + '-lightbox-img');
@@ -89,17 +89,13 @@ project_folder %} {% assign columns = gallery_columns | default: 3 %}
       document.body.style.overflow = 'hidden';
     };
 
-    window.closeLightbox = window.closeLightbox || function(galleryId) {
-      if (galleryId !== '{{ gallery_id }}') return;
-
+    window['closeLightbox_' + galleryId] = function() {
       const lightbox = document.getElementById(galleryId + '-lightbox');
       lightbox.style.display = 'none';
       document.body.style.overflow = 'auto';
     };
 
-    window.navigateLightbox = window.navigateLightbox || function(galleryId, direction) {
-      if (galleryId !== '{{ gallery_id }}') return;
-
+    window['navigateLightbox_' + galleryId] = function(direction) {
       currentImageIndex += direction;
 
       if (currentImageIndex < 0) {
@@ -108,19 +104,19 @@ project_folder %} {% assign columns = gallery_columns | default: 3 %}
         currentImageIndex = 0;
       }
 
-      openLightbox(galleryId, currentImageIndex);
+      window['openLightbox_' + galleryId](currentImageIndex);
     };
 
     // Keyboard navigation
     document.addEventListener('keydown', function(e) {
-      const lightbox = document.getElementById('{{ gallery_id }}-lightbox');
+      const lightbox = document.getElementById(galleryId + '-lightbox');
       if (lightbox && lightbox.style.display === 'flex') {
         if (e.key === 'Escape') {
-          closeLightbox('{{ gallery_id }}');
+          window['closeLightbox_' + galleryId]();
         } else if (e.key === 'ArrowLeft') {
-          navigateLightbox('{{ gallery_id }}', -1);
+          window['navigateLightbox_' + galleryId](-1);
         } else if (e.key === 'ArrowRight') {
-          navigateLightbox('{{ gallery_id }}', 1);
+          window['navigateLightbox_' + galleryId](1);
         }
       }
     });

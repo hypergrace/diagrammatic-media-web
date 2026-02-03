@@ -9,3 +9,9 @@ projecttags: "sigils,magic,generative-art,artist-book,risograph"
 series: "sigilistic perception"
 
 ---
+
+ Handbound artist book. First edition of 30. Risograph black and gold on 80lb paper.  
+
+{% assign project_folder = "solar-winds" %}
+{% assign gallery_columns = 2 %}
+{% include "auto-gallery.njk" %}

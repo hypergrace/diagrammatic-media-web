@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: project.njk
 title: Field Reports on the Institute for Imposters
 date: 2021-01-01
 year: 2021

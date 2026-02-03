@@ -8,8 +8,13 @@
     <!-- layout-specific styles are in src/css/style.css -->
   </head>
   <body>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="simple-shell">
-      <aside class="simple-left">
+      <aside class="simple-left" id="sidebar">
         <nav>
           <a href="/">home</a> | <a href="/about/">about</a>
         </nav>
@@ -33,11 +38,215 @@
 	
 
 	<article>
-		
+		<p>Handbound artist book. First edition of 30. Risograph black and gold on 80lb paper.</p>
+<div class="photo-gallery" data-columns="2">
+  <div class="gallery-grid" id="auto-gallery-solar-winds">
+<p><div class="gallery-item">
+<img
+        src="/assets/projects/solar-winds/A (Medium).png"
+        alt="A (medium)"
+        loading="lazy"
+        class="gallery-image"
+        onclick="window['openLightbox_auto-gallery-solar-winds'](0)"
+      />
+<div class="gallery-caption">
+A (medium)
+</div>
+</div></p>
+<p><div class="gallery-item">
+<img
+        src="/assets/projects/solar-winds/B (Medium).png"
+        alt="B (medium)"
+        loading="lazy"
+        class="gallery-image"
+        onclick="window['openLightbox_auto-gallery-solar-winds'](1)"
+      />
+<div class="gallery-caption">
+B (medium)
+</div>
+</div></p>
+<p><div class="gallery-item">
+<img
+        src="/assets/projects/solar-winds/C (Medium).png"
+        alt="C (medium)"
+        loading="lazy"
+        class="gallery-image"
+        onclick="window['openLightbox_auto-gallery-solar-winds'](2)"
+      />
+<div class="gallery-caption">
+C (medium)
+</div>
+</div></p>
+<p><div class="gallery-item">
+<img
+        src="/assets/projects/solar-winds/D (Medium).png"
+        alt="D (medium)"
+        loading="lazy"
+        class="gallery-image"
+        onclick="window['openLightbox_auto-gallery-solar-winds'](3)"
+      />
+<div class="gallery-caption">
+D (medium)
+</div>
+</div></p>
+<p><div class="gallery-item">
+<img
+        src="/assets/projects/solar-winds/spread-corrected.png"
+        alt="Spread corrected"
+        loading="lazy"
+        class="gallery-image"
+        onclick="window['openLightbox_auto-gallery-solar-winds'](4)"
+      />
+<div class="gallery-caption">
+Spread corrected
+</div>
+</div></p>
+  </div>
+</div>
+<!-- Lightbox Modal -->
+<div
+  id="auto-gallery-solar-winds-lightbox"
+  class="lightbox-overlay"
+  onclick="window['closeLightbox_auto-gallery-solar-winds']()"
+>
+  <div class="lightbox-container" onclick="event.stopPropagation()">
+    <span class="lightbox-close" onclick="window['closeLightbox_auto-gallery-solar-winds']()"
+      >&times;</span
+    >
+    <img
+      id="auto-gallery-solar-winds-lightbox-img"
+      class="lightbox-image"
+      src=""
+      alt=""
+    />
+    <div id="auto-gallery-solar-winds-lightbox-caption" class="lightbox-caption"></div>
+    <div class="lightbox-nav">
+      <button
+        class="lightbox-prev"
+        onclick="event.stopPropagation(); window['navigateLightbox_auto-gallery-solar-winds'](-1)"
+      >
+        &lt;
+      </button>
+      <button
+        class="lightbox-next"
+        onclick="event.stopPropagation(); window['navigateLightbox_auto-gallery-solar-winds'](1)"
+      >
+        &gt;
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+  // Auto Gallery functionality for auto-gallery-solar-winds
+  (function() {
+    const galleryId = 'auto-gallery-solar-winds';
+    const galleryData = [
+      
+        {
+          src: "/assets/projects/solar-winds/A (Medium).png",
+          alt: "A (medium)",
+          caption: "A (medium)"
+        },
+      
+        {
+          src: "/assets/projects/solar-winds/B (Medium).png",
+          alt: "B (medium)",
+          caption: "B (medium)"
+        },
+      
+        {
+          src: "/assets/projects/solar-winds/C (Medium).png",
+          alt: "C (medium)",
+          caption: "C (medium)"
+        },
+      
+        {
+          src: "/assets/projects/solar-winds/D (Medium).png",
+          alt: "D (medium)",
+          caption: "D (medium)"
+        },
+      
+        {
+          src: "/assets/projects/solar-winds/spread-corrected.png",
+          alt: "Spread corrected",
+          caption: "Spread corrected"
+        }
+      
+    ];
+    let currentImageIndex = 0;
+
+    // Create unique function names for this gallery
+    window['openLightbox_' + galleryId] = function(index) {
+      currentImageIndex = index;
+      const lightbox = document.getElementById(galleryId + '-lightbox');
+      const img = document.getElementById(galleryId + '-lightbox-img');
+      const caption = document.getElementById(galleryId + '-lightbox-caption');
+
+      img.src = galleryData[index].src;
+      img.alt = galleryData[index].alt;
+      caption.textContent = galleryData[index].caption || '';
+
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+
+    window['closeLightbox_' + galleryId] = function() {
+      const lightbox = document.getElementById(galleryId + '-lightbox');
+      lightbox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    };
+
+    window['navigateLightbox_' + galleryId] = function(direction) {
+      currentImageIndex += direction;
+
+      if (currentImageIndex < 0) {
+        currentImageIndex = galleryData.length - 1;
+      } else if (currentImageIndex >= galleryData.length) {
+        currentImageIndex = 0;
+      }
+
+      window['openLightbox_' + galleryId](currentImageIndex);
+    };
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      const lightbox = document.getElementById(galleryId + '-lightbox');
+      if (lightbox && lightbox.style.display === 'flex') {
+        if (e.key === 'Escape') {
+          window['closeLightbox_' + galleryId]();
+        } else if (e.key === 'ArrowLeft') {
+          window['navigateLightbox_' + galleryId](-1);
+        } else if (e.key === 'ArrowRight') {
+          window['navigateLightbox_' + galleryId](1);
+        }
+      }
+    });
+  })();
+</script>
+
 	</article>
 </div>
 
 </main>
     </div>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const sidebar = document.getElementById('sidebar');
+      
+      hamburger.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+      
+      // Close sidebar when clicking outside on mobile
+      document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+            sidebar.classList.remove('active');
+            hamburger.classList.remove('active');
+          }
+        }
+      });
+    </script>
   </body>
 </html>

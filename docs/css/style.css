@@ -1,182 +1,4 @@
-/* ===== AZERET FONT COLLECTION ===== */
-/* Azeret Sans - Primary font family for body text */
-@font-face {
-  font-family: "Azeret";
-  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Light.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Light.ttf")
-      format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "Azeret";
-  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-LightItalic.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-LightItalic.ttf")
-      format("truetype");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Azeret";
-  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Regular.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Regular.ttf")
-      format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Azeret";
-  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-RegularItalic.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-RegularItalic.ttf")
-      format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Azeret";
-  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Medium.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Medium.ttf")
-      format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Azeret";
-  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-MediumItalic.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-MediumItalic.ttf")
-      format("truetype");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Azeret";
-  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-SemiBold.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-SemiBold.ttf")
-      format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Azeret";
-  src: url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Bold.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret/Azeret-TRIAL-Bold.ttf")
-      format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Azeret Mono - Secondary font family for headers and monospace elements */
-@font-face {
-  font-family: "Azeret Mono";
-  src: url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Light.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Light.ttf")
-      format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Azeret Mono";
-  src: url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Regular.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Regular.ttf")
-      format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Azeret Mono";
-  src: url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Medium.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Medium.ttf")
-      format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Azeret Mono";
-  src: url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-SemiBold.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-SemiBold.ttf")
-      format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Azeret Mono";
-  src: url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Bold.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret Mono/AzeretMono-TRIAL-Bold.ttf")
-      format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Azeret Semi Mono - Alternative monospace for variety */
-@font-face {
-  font-family: "Azeret Semi Mono";
-  src: url("../assets/fonts/Azeret/Azeret SemiMono/AzeretSemiMono-TRIAL-Regular.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret SemiMono/AzeretSemiMono-TRIAL-Regular.ttf")
-      format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Azeret Semi Mono";
-  src: url("../assets/fonts/Azeret/Azeret SemiMono/AzeretSemiMono-TRIAL-Medium.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret SemiMono/AzeretSemiMono-TRIAL-Medium.ttf")
-      format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Azeret Semi Mono";
-  src: url("../assets/fonts/Azeret/Azeret SemiMono/AzeretSemiMono-TRIAL-SemiBold.woff2")
-      format("woff2"),
-    url("../assets/fonts/Azeret/Azeret SemiMono/AzeretSemiMono-TRIAL-SemiBold.ttf")
-      format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
 
 /* ===== COLOR SYSTEM ===== */
 :root {
@@ -215,6 +37,45 @@
   --secondary-bg: #3d2817;
   --accent-color: #f39c12;
   */
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  background: transparent;
+  border: 2px solid var(--text-color);
+  padding: 0.5rem;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger span {
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+  background: var(--text-color);
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(0.5rem, 0.5rem);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(0.5rem, -0.5rem);
 }
 
 /* Simple two-pane layout styles */
@@ -282,6 +143,31 @@
 
 /* Responsive: left pane collapses under 720px */
 @media (max-width: 720px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .simple-left {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 80%;
+    max-width: 300px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .simple-left.active {
+    left: 0;
+  }
+  
+  .simple-right {
+    width: 100%;
+    padding: 1rem;
+  }
+  
   .simple-shell { display:block; }
   .simple-left { width:100%; min-width:unset; border-bottom:1px solid rgba(255,255,255,0.03); }
   .simple-right { padding:20px; }
@@ -290,8 +176,8 @@
 /* ===== FONT SYSTEM ===== */
 :root {
   /* Font Scheme 1 - Azeret Collection (New Default) */
-  --primary-font: "Menlo", "Courier New", "Monaco", monospace;
-  --secondary-font: "Menlo", "Courier New", monospace;
+  --primary-font: "Space Mono", "Courier New", "Monaco", monospace;
+  --secondary-font: "Space Mono", "Courier New", monospace;
 
   /* Font Scheme 2 - Azeret Semi Mono Mix 
   --primary-font: "Azeret", "Golos Text", system-ui, sans-serif;
@@ -365,6 +251,20 @@ iframe {
   height: 100%;
   padding-top: 0;
   border: none;
+}
+
+/* Responsive Images */
+.responsive-image {
+  max-width: 100%;
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.responsive-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 0;
 }
 
 /* ===== HEADER IMAGE SYSTEM ===== */
@@ -740,14 +640,7 @@ h6 {
 .gallery-item {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
   background: var(--secondary-bg);
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .gallery-image {
@@ -755,11 +648,6 @@ h6 {
   height: 200px;
   object-fit: cover;
   cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.gallery-image:hover {
-  transform: scale(1.05);
 }
 
 .gallery-caption {
@@ -772,7 +660,6 @@ h6 {
   padding: 1rem;
   font-size: 0.9rem;
   opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .gallery-item:hover .gallery-caption {

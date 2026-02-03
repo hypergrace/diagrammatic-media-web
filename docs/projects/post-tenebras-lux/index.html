@@ -8,8 +8,13 @@
     <!-- layout-specific styles are in src/css/style.css -->
   </head>
   <body>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="simple-shell">
-      <aside class="simple-left">
+      <aside class="simple-left" id="sidebar">
         <nav>
           <a href="/">home</a> | <a href="/about/">about</a>
         </nav>
@@ -33,7 +38,8 @@
 	
 
 	<article>
-		<div class="youtube-embed">
+		<p>media: 20’ x 8’. Plywood, drywall paint, custom PCBs, microcontrollers, electric cabling, car speakers, wood, plastic, iridescent film, camouflage netting, projection, computer, real-time sound and projection algorithms.</p>
+<div class="youtube-embed">
       <iframe 
         src="https://www.youtube-nocookie.com/embed/imncDuGJrL8?modestbranding=1&rel=0&showinfo=0" 
         title="YouTube video" 
@@ -42,11 +48,178 @@
         allowfullscreen>
       </iframe>
     </div>
+<div class="photo-gallery" data-columns="3">
+  <div class="gallery-grid" id="auto-gallery-post-tenebras-lux">
+<p><div class="gallery-item">
+<img
+        src="/assets/projects/post-tenebras-lux/DSC03195 (Large).jpg"
+        alt="Dsc03195 (large)"
+        loading="lazy"
+        class="gallery-image"
+        onclick="window['openLightbox_auto-gallery-post-tenebras-lux'](0)"
+      />
+<div class="gallery-caption">
+Dsc03195 (large)
+</div>
+</div></p>
+<p><div class="gallery-item">
+<img
+        src="/assets/projects/post-tenebras-lux/DSC03202 (Large).JPG"
+        alt="Dsc03202 (large)"
+        loading="lazy"
+        class="gallery-image"
+        onclick="window['openLightbox_auto-gallery-post-tenebras-lux'](1)"
+      />
+<div class="gallery-caption">
+Dsc03202 (large)
+</div>
+</div></p>
+<p><div class="gallery-item">
+<img
+        src="/assets/projects/post-tenebras-lux/DSC03205 (Large).JPG"
+        alt="Dsc03205 (large)"
+        loading="lazy"
+        class="gallery-image"
+        onclick="window['openLightbox_auto-gallery-post-tenebras-lux'](2)"
+      />
+<div class="gallery-caption">
+Dsc03205 (large)
+</div>
+</div></p>
+  </div>
+</div>
+<!-- Lightbox Modal -->
+<div
+  id="auto-gallery-post-tenebras-lux-lightbox"
+  class="lightbox-overlay"
+  onclick="window['closeLightbox_auto-gallery-post-tenebras-lux']()"
+>
+  <div class="lightbox-container" onclick="event.stopPropagation()">
+    <span class="lightbox-close" onclick="window['closeLightbox_auto-gallery-post-tenebras-lux']()"
+      >&times;</span
+    >
+    <img
+      id="auto-gallery-post-tenebras-lux-lightbox-img"
+      class="lightbox-image"
+      src=""
+      alt=""
+    />
+    <div id="auto-gallery-post-tenebras-lux-lightbox-caption" class="lightbox-caption"></div>
+    <div class="lightbox-nav">
+      <button
+        class="lightbox-prev"
+        onclick="event.stopPropagation(); window['navigateLightbox_auto-gallery-post-tenebras-lux'](-1)"
+      >
+        &lt;
+      </button>
+      <button
+        class="lightbox-next"
+        onclick="event.stopPropagation(); window['navigateLightbox_auto-gallery-post-tenebras-lux'](1)"
+      >
+        &gt;
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+  // Auto Gallery functionality for auto-gallery-post-tenebras-lux
+  (function() {
+    const galleryId = 'auto-gallery-post-tenebras-lux';
+    const galleryData = [
+      
+        {
+          src: "/assets/projects/post-tenebras-lux/DSC03195 (Large).jpg",
+          alt: "Dsc03195 (large)",
+          caption: "Dsc03195 (large)"
+        },
+      
+        {
+          src: "/assets/projects/post-tenebras-lux/DSC03202 (Large).JPG",
+          alt: "Dsc03202 (large)",
+          caption: "Dsc03202 (large)"
+        },
+      
+        {
+          src: "/assets/projects/post-tenebras-lux/DSC03205 (Large).JPG",
+          alt: "Dsc03205 (large)",
+          caption: "Dsc03205 (large)"
+        }
+      
+    ];
+    let currentImageIndex = 0;
+
+    // Create unique function names for this gallery
+    window['openLightbox_' + galleryId] = function(index) {
+      currentImageIndex = index;
+      const lightbox = document.getElementById(galleryId + '-lightbox');
+      const img = document.getElementById(galleryId + '-lightbox-img');
+      const caption = document.getElementById(galleryId + '-lightbox-caption');
+
+      img.src = galleryData[index].src;
+      img.alt = galleryData[index].alt;
+      caption.textContent = galleryData[index].caption || '';
+
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+
+    window['closeLightbox_' + galleryId] = function() {
+      const lightbox = document.getElementById(galleryId + '-lightbox');
+      lightbox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    };
+
+    window['navigateLightbox_' + galleryId] = function(direction) {
+      currentImageIndex += direction;
+
+      if (currentImageIndex < 0) {
+        currentImageIndex = galleryData.length - 1;
+      } else if (currentImageIndex >= galleryData.length) {
+        currentImageIndex = 0;
+      }
+
+      window['openLightbox_' + galleryId](currentImageIndex);
+    };
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      const lightbox = document.getElementById(galleryId + '-lightbox');
+      if (lightbox && lightbox.style.display === 'flex') {
+        if (e.key === 'Escape') {
+          window['closeLightbox_' + galleryId]();
+        } else if (e.key === 'ArrowLeft') {
+          window['navigateLightbox_' + galleryId](-1);
+        } else if (e.key === 'ArrowRight') {
+          window['navigateLightbox_' + galleryId](1);
+        }
+      }
+    });
+  })();
+</script>
 
 	</article>
 </div>
 
 </main>
     </div>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const sidebar = document.getElementById('sidebar');
+      
+      hamburger.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+      
+      // Close sidebar when clicking outside on mobile
+      document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+            sidebar.classList.remove('active');
+            hamburger.classList.remove('active');
+          }
+        }
+      });
+    </script>
   </body>
 </html>

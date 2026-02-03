@@ -14,6 +14,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   // eleventyConfig.addPlugin(clean);
   eleventyConfig.addPassthroughCopy("*.pdf");
+  eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.setTemplateFormats([
     // Templates:
     "html",
@@ -51,6 +52,13 @@ module.exports = function (eleventyConfig) {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
       </iframe>
+    </div>`;
+  });
+
+  // Add shortcode for responsive images
+  eleventyConfig.addShortcode("image", function(src, alt = "") {
+    return `<div class="responsive-image">
+      <img src="${src}" alt="${alt}" loading="lazy">
     </div>`;
   });
 

@@ -1,6 +1,6 @@
 ---
 title: I WANT AN AI FOR PRESIDENT
-layout: base.njk
+layout: project.njk
 tags: project
 date: 2024-02-01
 collaborators: Kristin McWharter

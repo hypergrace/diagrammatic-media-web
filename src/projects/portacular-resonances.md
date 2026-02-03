@@ -1,6 +1,7 @@
 ---
 title: Portacular Resonances
 layout: project.njk
+collaborators: Brandon Mechtley
 subtitle: Heat-and-noise, urban media installation
 year : 2019
 date: 2018-01-02
