@@ -14,7 +14,7 @@ let renderHeight = 0;
 
 let noiseGraph = [];
 
-let message = "happy valentine's day, my boyfriend!";
+let message = "happy valentine's day, sweetest boyfriend!";
 let words = [];
 let wordDuration = 750;
 let blinkInterval = 250;
