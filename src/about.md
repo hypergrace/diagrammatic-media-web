@@ -18,6 +18,6 @@ In 2023, I co-found [CCAM, the Center for Concrete and Abstract Machines](https:
 
 # short performer bio
 
-Grace grace grace (performing as hypergrace) is an artist working at the busy intersection of process philosophy, computational media systems, and cybernetics. He leverages training in cello performance to create generative sound + medja installations and performances luring encounters with perception, thinking, and feeling. Grace writes and assembles software / hardware systems with indeterminate logics aiming to create play in the unforeseeable unpredictabilities of the aesthetic event.
+Grace grace grace (performing as hypergrace) is an artist working at the busy intersection of process philosophy, computational media systems, and cybernetics. He leverages training in cello performance to create generative sound + media installations and performances luring encounters with perception, thinking, and feeling. Grace writes and assembles software / hardware systems with indeterminate logics aiming to create play in the unforeseeable unpredictabilities of the aesthetic event.
 
 
