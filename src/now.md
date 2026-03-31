@@ -13,7 +13,7 @@ title: NOW
 
 I am travelling to Indiana University Bloomington as an invited guest respondent for their Digital Art MFA portfolio review. March. 
 
-I'm performing live, real-time spatialized experimental computer music as HYPERGRACE in March at Elastic Arts at the [CLEAT SERIES](https://elasticarts.org/cleat) on 16 channel bespoke sound system. March.
+I'm performing live, real-time spatialized experimental computer music as HYPERGRACE in March at Elastic Arts at the [CLEAT SERIES](https://elasticarts.org/cleat) on 16 channel bespoke sound system. See [documentation](./projects/hypergrace.md). March.
 
 I'm performing live experimental computer music as HYPERGRACE among 20 performance artists at THRESHOLD, a durational performance art event curated by Claire Fleming Staples at a budding project space in Humboldt Park. December.
 
