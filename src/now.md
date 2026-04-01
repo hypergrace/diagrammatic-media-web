@@ -11,7 +11,7 @@ title: NOW
 
 [CCAM EARTH](https://ccam.world/resources/ccam-earth/) workshop at the Eskenazi Museum of Art @ Indiana Unviversity Bloomington. April.
 
-I'm developed a Eurorack-based analog syntheiszer mixer for the #CCAM #Estuary system. 
+I'm developed a Eurorack-based analog synthesizer mixer for the #CCAM #Estuary system. 
 
 Working senior production on #CCAM 's [WE DON'T KNOW YET WHAT A CINEMA CAN DO]([https://ccam.world/programs/26-04-10-wdky/]), an annual of expanded cinema in collaboration with Onion City Film Festival. April.
 
