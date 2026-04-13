@@ -17,18 +17,9 @@
   </head>
   <body>
     <div class="links">
-      <h1><a href="/" {% if page.url == '/' %}class="nav-active"{% endif %} style="text-decoration: none; color: inherit;">Grace Grace Grace</a></h1>
+      <h1><a href="/" {% if page.url == '/' %}class="nav-active"{% endif %} style="text-decoration: none; color: inherit;">HOME</a></h1>
       <span class="divider">|</span>
       <a href="/about" {% if page.url.startsWith('/about') %}class="nav-active"{% endif %}>ABOUT</a>
-      <span class="divider">|</span>
-      <a href="/projects" {% if page.url.startsWith('/projects') %}class="nav-active"{% endif %}>PROJECTS</a>
-      <span class="divider">|</span>
-      <a href="/assets/pdf/portfolio.pdf">PORTFOLIO</a>
-      <span class="divider">|</span>
-
-      <a href="/now" {% if page.url.startsWith('/now') %}class="nav-active"{% endif %}>NOW</a>
-      <span class="divider">|</span>
-      <a href="/teaching" {% if page.url.startsWith('/teaching') %}class="nav-active"{% endif %}>TEACHING</a>
       <span class="divider">|</span>
       <a href="/cv" {% if page.url.startsWith('/cv') %}class="nav-active"{% endif %}>CV</a>
     </div>
