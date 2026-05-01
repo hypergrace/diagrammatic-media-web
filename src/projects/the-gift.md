@@ -12,6 +12,14 @@ collaborators: Muindi Fanuel Muindi, Ylfa Muindi, Brandon Mechtley
 
 A workshop and installation exploring alternate economies through interactive movement environments and digital stills.
 
+
+### Gallery
+
+{% assign project_folder = "the-gift" %}
+{% assign gallery_columns = 3 %}
+{% include "auto-gallery.njk" %}
+
+
 ### The Gift and the Ledger
 
 by Muindi Fanuel Muindi
@@ -35,9 +43,3 @@ This workshop insists that, instead of pitting the Gift against the Ledger and p
 ### Documentation
 
 <iframe width="100%" height="1000px" src="/assets/pdf/gift.pdf" frameborder="0" allowfullscreen></iframe>
-
-### Gallery
-
-{% assign project_folder = "the-gift" %}
-{% assign gallery_columns = 3 %}
-{% include "auto-gallery.njk" %}

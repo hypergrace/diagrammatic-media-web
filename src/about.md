@@ -5,6 +5,8 @@ headshot: /assets/headers/headshot.png
 ---
 
 # grace grace grace
+[aka grace laroy johnson]
+[fka garrett laroy johnson]
 
 # artist statement
 
