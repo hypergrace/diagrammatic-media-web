@@ -16,7 +16,7 @@ I am an installation and performance artist working with real-time sonic and vis
 
 I teach media theory-philosophy seminars as well as studio courses in the Art Technology / Sound Practices department at the School of the Art Institute of Chicago and in the new media area at the University of Illinois Chicago.
 
-In 2023, I co-found [CCAM, the Center for Concrete and Abstract Machines](https://ccam.world).
+In 2023, I co-founded [CCAM, the Center for Concrete and Abstract Machines](https://ccam.world).
 
 # short performer bio
 
