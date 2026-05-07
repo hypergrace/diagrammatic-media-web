@@ -10,6 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "clean": "node -e \"const fs=require('fs');fs.rmSync('./docs',{recursive:true,force:true});\" && eleventy"
   }
 }

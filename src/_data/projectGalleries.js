@@ -2,54 +2,56 @@ const fs = require("fs");
 const path = require("path");
 
 module.exports = function () {
-  const projectsImageDir = "./src/assets/projects";
+  const projectsDir = "./src/projects";
   const projectGalleries = {};
+  const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"];
 
   try {
-    // Check if the projects directory exists
-    if (fs.existsSync(projectsImageDir)) {
-      // Get all subdirectories (project folders)
-      const projectFolders = fs
-        .readdirSync(projectsImageDir, { withFileTypes: true })
-        .filter((dirent) => dirent.isDirectory())
-        .map((dirent) => dirent.name);
+    if (fs.existsSync(projectsDir)) {
+      // Top-level dirs are now category folders
+      const categoryFolders = fs
+        .readdirSync(projectsDir, { withFileTypes: true })
+        .filter((d) => d.isDirectory())
+        .map((d) => d.name);
 
-      // For each project folder, get all image files
-      projectFolders.forEach((folder) => {
-        const folderPath = path.join(projectsImageDir, folder);
-        const imageExtensions = [
-          ".jpg",
-          ".jpeg",
-          ".png",
-          ".gif",
-          ".webp",
-          ".svg",
-        ];
-
+      categoryFolders.forEach((cat) => {
+        const catPath = path.join(projectsDir, cat);
         try {
-          const files = fs
-            .readdirSync(folderPath)
-            .filter((file) => {
-              const ext = path.extname(file).toLowerCase();
-              return imageExtensions.includes(ext);
-            })
-            .sort(); // Sort alphabetically
+          const projectFolders = fs
+            .readdirSync(catPath, { withFileTypes: true })
+            .filter((d) => d.isDirectory())
+            .map((d) => d.name);
 
-          if (files.length > 0) {
-            projectGalleries[folder] = files.map((file) => ({
-              filename: file,
-              path: `/assets/projects/${folder}/${file}`,
-              name: path.parse(file).name,
-              ext: path.extname(file),
-            }));
-          }
+          projectFolders.forEach((folder) => {
+            const galleryPath = path.join(catPath, folder, "gallery");
+            try {
+              if (!fs.existsSync(galleryPath)) return;
+              const files = fs
+                .readdirSync(galleryPath)
+                .filter((file) =>
+                  imageExtensions.includes(path.extname(file).toLowerCase())
+                )
+                .sort();
+
+              if (files.length > 0) {
+                projectGalleries[folder] = files.map((file) => ({
+                  filename: file,
+                  path: `/projects/${cat}/${folder}/gallery/${file}`,
+                  name: path.parse(file).name,
+                  ext: path.extname(file),
+                }));
+              }
+            } catch (err) {
+              console.warn(`Could not read gallery for ${folder}:`, err.message);
+            }
+          });
         } catch (err) {
-          console.warn(`Could not read project folder ${folder}:`, err.message);
+          console.warn(`Could not read category folder ${cat}:`, err.message);
         }
       });
     }
   } catch (err) {
-    console.warn("Could not read projects image directory:", err.message);
+    console.warn("Could not read projects directory:", err.message);
   }
 
   return projectGalleries;

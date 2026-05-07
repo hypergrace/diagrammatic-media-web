@@ -72,6 +72,21 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // Sort projects by year descending (handles ranges like "2025-26", "2013-2015")
+  eleventyConfig.addFilter("sortByYearDesc", function(projects) {
+    const getEndYear = (y) => {
+      if (!y) return 0;
+      const parts = String(y).split(/[-\/]/);
+      const last = parts[parts.length - 1].trim();
+      const n = parseInt(last);
+      if (last.length <= 2) return 2000 + n;
+      return n;
+    };
+    return [...projects].sort((a, b) =>
+      getEndYear(b.data.year) - getEndYear(a.data.year)
+    );
+  });
+
   // Add collection to generate hashtag list
   eleventyConfig.addCollection("hashtagList", function (collectionApi) {
     const projects = collectionApi.getFilteredByTag("project");

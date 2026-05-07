@@ -1,6 +1,95 @@
 ---
 layout: simple.njk
-title: Projects
+title: Garrett Laroy Johnson
 ---
 
-<!-- Index uses the simple two-pane layout; left nav is series, right pane shows hashtags -->
+{%- set categoryOrder = [
+  {key: "performance",             label: "performance"},
+  {key: "installation-visual-art", label: "installation + visual art"},
+  {key: "writing-research",        label: "writing + research"},
+  {key: "synthesizers",            label: "synthesizers"},
+  {key: "curation-organization",   label: "curation + organization"}
+] -%}
+
+{%- set allTags = [] -%}
+{%- for p in collections.project -%}
+  {%- if p.data.projecttags -%}
+    {%- set parts = p.data.projecttags.split(',') -%}
+    {%- for t in parts -%}
+      {%- set clean = t.trim() -%}
+      {%- if clean and clean not in allTags -%}
+        {%- set allTags = (allTags.push(clean), allTags) -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="portfolio-filters">
+  <div class="category-filters">
+    <button class="cat-filter active" data-key="all">ALL</button>
+    {%- for cat in categoryOrder -%}
+      <button class="cat-filter" data-key="{{ cat.key }}">{{ cat.label }}</button>
+    {%- endfor -%}
+  </div>
+  <div class="tag-filters">
+    {%- for t in allTags -%}
+      <button class="tag-filter" data-rawtag="{{ t }}">#{{ t }}</button>
+    {%- endfor -%}
+  </div>
+</div>
+
+<div class="portfolio-grid">
+  {%- for p in collections.project -%}
+    {%- set urlParts = p.url.split('/') -%}
+    {%- set slug = urlParts[3] -%}
+    {%- set thumb = projectThumbnails[slug] -%}
+    <a href="{{ p.url }}" class="portfolio-item" data-category="{{ p.data.category }}" data-tags="{{ p.data.projecttags }}">
+      {%- if thumb -%}
+        <img src="{{ thumb }}" alt="{{ p.data.title }}" loading="lazy">
+      {%- else -%}
+        <div class="thumb-placeholder"></div>
+      {%- endif -%}
+      <div class="portfolio-title">{{ p.data.title }}{% if p.data.year %} <span class="portfolio-year">({{ p.data.year }})</span>{% endif %}</div>
+    </a>
+  {%- endfor -%}
+</div>
+
+<script>
+(function() {
+  const catBtns = document.querySelectorAll('.cat-filter');
+  const tagBtns = document.querySelectorAll('.tag-filter');
+  const items   = document.querySelectorAll('.portfolio-item');
+
+  function clearActive() {
+    catBtns.forEach(b => b.classList.remove('active'));
+    tagBtns.forEach(b => b.classList.remove('active'));
+  }
+
+  function filterItems(test) {
+    items.forEach(item => {
+      item.style.display = test(item) ? '' : 'none';
+    });
+  }
+
+  catBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      clearActive();
+      btn.classList.add('active');
+      const key = btn.dataset.key;
+      filterItems(item => key === 'all' || item.dataset.category === key);
+    });
+  });
+
+  tagBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      clearActive();
+      btn.classList.add('active');
+      const tag = btn.dataset.rawtag;
+      filterItems(item => {
+        if (!item.dataset.tags) return false;
+        return item.dataset.tags.split(',').map(t => t.trim()).includes(tag);
+      });
+    });
+  });
+})();
+</script>
