@@ -40,12 +40,12 @@
 }
 
 /* Hamburger Menu Button */
-.hamburger {
+.mobile-topbar {
   display: none;
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 1001;
+}
+
+.hamburger {
+  display: flex;
   background: transparent;
   border: 2px solid var(--text-color);
   padding: 0.5rem;
@@ -88,7 +88,7 @@
   box-sizing: border-box;
   overflow-y: auto;
 }
-.simple-right { flex:1; padding:40px; overflow:auto; }
+.simple-right { flex:1; padding:40px; overflow-y: auto; overflow-x: hidden; }
 
 .simple-left nav {
   margin:0 0 1rem 0;
@@ -143,20 +143,33 @@
 
 /* Responsive: left pane collapses under 720px */
 @media (max-width: 720px) {
-  .hamburger {
+  .mobile-topbar {
     display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    background: var(--background-color);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    padding: 0.5rem 1rem;
+    height: 3.5rem;
   }
-  
+
+  .simple-right {
+    padding-top: 0.5rem;
+  }
+
   .simple-left {
     position: fixed;
-    top: 0;
+    top: 3.5rem;
     left: -100%;
-    height: 100vh;
+    height: calc(100vh - 3.5rem);
     width: 80%;
     max-width: 300px;
     z-index: 1000;
     transition: left 0.3s ease;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
   }
   
   .simple-left.active {
@@ -173,36 +186,55 @@
   .simple-right { padding:20px; }
 }
 
+/* ===== TEODOR VARIABLE FONT ===== */
+@font-face {
+  font-family: "Teodor";
+  src: url("/assets/fonts/TeodorVF-TRIAL.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ===== FONT SYSTEM ===== */
 :root {
-  /* Font Scheme 1 - Azeret Collection (New Default) */
-  --primary-font: "Space Mono", "Courier New", "Monaco", monospace;
-  --secondary-font: "Space Mono", "Courier New", monospace;
+  /* Font Scheme 1 — Teodor Editorial
+     All-Teodor. Body uses regular weight; nav/labels use light weight for air. */
+  --primary-font: "Teodor", Georgia, serif;
+  --secondary-font: "Teodor", Georgia, serif;
+  --font-weight-normal: 300;
+  --font-weight-secondary: 200;
+ 
 
-  /* Font Scheme 2 - Azeret Semi Mono Mix 
-  --primary-font: "Azeret", "Golos Text", system-ui, sans-serif;
-  --secondary-font: "Azeret Semi Mono", "Major Mono Display", monospace;
+  /* Font Scheme 2 — Teodor + Mono
+     Elegant serif body paired with monospace labels/nav for contrast.
+  --primary-font: "Teodor", Georgia, serif;
+  --secondary-font: "SF Mono", "Azeret Mono", "Courier New", monospace;
   */
 
-  /* Font Scheme 3 - Original Modern Mix 
-  --primary-font: "Golos Text", system-ui, sans-serif;
-  --secondary-font: "Major Mono Display", monospace;
+  /* Font Scheme 3 — Teodor + System Sans
+     Teodor for body warmth, clean system-ui for UI chrome.
+  --primary-font: "Teodor", Georgia, serif;
+  --secondary-font: system-ui, "Helvetica Neue", Arial, sans-serif;
   */
 
-  /* Font Scheme 4 - Classic Serif 
-  --primary-font: "Georgia", serif;
-  --secondary-font: "Monaco", "Azeret Mono", monospace;
+  /* Font Scheme 4 — Teodor Bold Display + Teodor Light Body
+     Heavy Teodor for headings accent via secondary, light Teodor for reading.
+  --primary-font: "Teodor", Georgia, serif;
+  --secondary-font: "Teodor", Georgia, serif;
+  --font-weight-normal: 200;
+  --font-weight-secondary: 700;
   */
 
-  /* Font Scheme 5 - Sans Serif Clean 
-  --primary-font: "Helvetica Neue", "Azeret", Arial, sans-serif;
-  --secondary-font: "Courier New", "Azeret Mono", monospace;
+  /* Font Scheme 5 — Mono Primary + Teodor Secondary
+     Typewriter body with Teodor lending elegance to nav and headings.
+  --primary-font: "SF Mono", "Azeret Mono", "Courier New", monospace;
+  --secondary-font: "Teodor", Georgia, serif;
   */
 
-  /* Font Scheme 6 - Futura Modern 
-  --primary-font: "Futura", "Azeret", "Trebuchet MS", sans-serif;
-  --secondary-font: "SF Mono", "Azeret Mono", Monaco, monospace;
-  */
+  /* Font Scheme 6 — Teodor + Space Mono (current default)
+     Classic editorial serif body with Space Mono for sharp technical labels. */
+  /* --primary-font: "Teodor", Georgia, serif;
+  --secondary-font: "Space Mono", "Courier New", monospace; */
 }
 
 /* ===== FONT WEIGHT SYSTEM ===== */
@@ -213,6 +245,18 @@
   --font-weight-medium: 500; /* Emphasized text, buttons */
   --font-weight-semibold: 600; /* Subheadings, important elements */
   --font-weight-bold: 700; /* Main headings, strong emphasis */
+}
+
+html {
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video, iframe, pre, table {
+  max-width: 100%;
 }
 
 body {
@@ -227,8 +271,8 @@ body {
 
 @media (max-width: 720px) {
   body {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -406,6 +450,25 @@ h1 {
   font-weight: var(--font-weight-bold);
 }
 
+/* Width-filling title — font size set by JS */
+.h1-fill {
+  font-family: var(--secondary-font);
+  font-weight: var(--font-weight-bold);
+  font-size: 4rem; /* fallback before JS runs */
+  line-height: 1.05;
+  margin-top: 0;
+  margin-bottom: 0.00em;
+  overflow: hidden;
+}
+
+
+.h5-subtitle {
+  font-family: var(--secondary-font);
+  font-weight: var(--font-weight-light);
+  font-size: 0.9rem;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+}
 h2 {
   font-family: var(--secondary-font);
   font-weight: var(--font-weight-semibold);
@@ -536,6 +599,31 @@ h6 {
   text-decoration: underline;
 }
 
+/* External link buttons */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.project-link-btn {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--primary-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.project-link-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+}
+
 /* Hashtag filters */
 .hashtag-filters {
   display: flex;
@@ -619,9 +707,9 @@ h6 {
 }
 
 .gallery-grid {
-  display: grid;
-  gap: 1rem;
+  column-gap: 1rem;
   margin-bottom: 2rem;
+  columns: 3;
 }
 
 /* Fix for Liquid template paragraph wrapping */
@@ -632,22 +720,17 @@ h6 {
 }
 
 /* Column configurations */
-.photo-gallery[data-columns="2"] .gallery-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.photo-gallery[data-columns="3"] .gallery-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.photo-gallery[data-columns="4"] .gallery-grid {
-  grid-template-columns: repeat(4, 1fr);
-}
+.photo-gallery[data-columns="1"] .gallery-grid { columns: 1; }
+.photo-gallery[data-columns="2"] .gallery-grid { columns: 2; }
+.photo-gallery[data-columns="3"] .gallery-grid { columns: 3; }
+.photo-gallery[data-columns="4"] .gallery-grid { columns: 4; }
 
 .gallery-item {
+  break-inside: avoid;
   position: relative;
   overflow: hidden;
   background: var(--secondary-bg);
+  margin-bottom: 1rem;
 }
 
 /* Remove link decoration from gallery anchor wrappers */
@@ -658,8 +741,8 @@ h6 {
 
 .gallery-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: auto;
+  display: block;
   cursor: pointer;
 }
 
@@ -673,6 +756,7 @@ h6 {
   padding: 1rem;
   font-size: 0.9rem;
   opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .gallery-item:hover .gallery-caption {
@@ -708,11 +792,7 @@ h6 {
 @media (max-width: 768px) {
   .photo-gallery[data-columns="3"] .gallery-grid,
   .photo-gallery[data-columns="4"] .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery-image {
-    height: 150px;
+    columns: 2;
   }
 }
 
@@ -720,7 +800,7 @@ h6 {
   .photo-gallery[data-columns="2"] .gallery-grid,
   .photo-gallery[data-columns="3"] .gallery-grid,
   .photo-gallery[data-columns="4"] .gallery-grid {
-    grid-template-columns: 1fr;
+    columns: 1;
   }
 
   .gallery-caption {

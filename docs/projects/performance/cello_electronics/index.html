@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   </head>
   <body>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <div class="mobile-topbar" id="mobile-topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
     <div class="simple-shell">
       <aside class="simple-left" id="sidebar">
         <nav>
           <a href="/">HOME</a> | <a href="/news/">NEWS</a> | <a href="/about/">ABOUT</a> | <a href="/cv">CV</a>
-        </nav>
-        <h2>Categories</h2><div class="series-heading">performance</div>
+        </nav><div class="series-heading">performance</div>
           <ol class="series-list"><li><a href="/projects/performance/hypergrace/">HYPERGRACE (2025-26)</a></li><li><a href="/projects/performance/iwantanai/">I WANT AN AI FOR PRESIDENT (2024)</a></li><li><a href="/projects/performance/cello_electronics/">Cello + Electronics (2014-2018)</a></li><li><a href="/projects/performance/gulch/">GULCH (2015-16)</a></li><li><a href="/projects/performance/visible-sketch/">Visible Sketch v.4 (2016)</a></li><li><a href="/projects/performance/lorkas/">LORKAS (2013-2015)</a></li></ol><div class="series-heading">installation + visual art</div>
           <ol class="series-list"><li><a href="/projects/installation-visual-art/post-tenebras-lux/">post tenebras lux (2025)</a></li><li><a href="/projects/installation-visual-art/differences-rainbow/">difference&#39;s rainbow (2025)</a></li><li><a href="/projects/installation-visual-art/solar-winds/">Solar Winds (2024)</a></li><li><a href="/projects/installation-visual-art/the-gift/">The Gift and the Ledger (2020)</a></li><li><a href="/projects/performance/lanterns/">lanterns (2017-2019)</a></li><li><a href="/projects/installation-visual-art/portacular-resonances/">Portacular Resonances (2019)</a></li><li><a href="/projects/installation-visual-art/renao/">Renao 热闹 (2019)</a></li><li><a href="/projects/installation-visual-art/thermal/">thermal economies (2018)</a></li><li><a href="/projects/installation-visual-art/tactical-finance/">Tactical Finance (2017)</a></li></ol><div class="series-heading">writing + research</div>
           <ol class="series-list"><li><a href="/projects/writing-research/ntel/">Neurodiverse Telematic Embodied Learning (2020-2025)</a></li><li><a href="/projects/writing-research/how-to-see-in-the-dark/">how to see in the dark (2025)</a></li><li><a href="/projects/writing-research/symbols-signals-sigils/">Symbols, Signals, and Sigils (2025)</a></li><li><a href="/projects/writing-research/diagrammatic-media/">Diagrammatic Media: Subjectivity — Ecology — Event
@@ -32,12 +33,14 @@
 
       <main class="simple-right">
         <div>
-	<h1>Cello + Electronics</h1>
-	<h5 style="text-align:left"> (2014-2018)</h5>
+	<h1 class="h1-fill">Cello + Electronics</h1>
+	<h5 class="h5-subtitle" style="text-align:left"> (2014-2018)</h5>
 
 
 	
 		<p><a href="/projects/experimental-music/">#experimental-music</a>, <a href="/projects/ambient/">#ambient</a>, <a href="/projects/live-processing/">#live-processing</a>, <a href="/projects/max-msp/">#max-msp</a>, <a href="/projects/live-electronics/">#live-electronics</a>, <a href="/projects/sound/">#sound</a></p>
+	
+
 	
 
 	
@@ -100,5 +103,73 @@ Between 2014 and 2018, I performed extensively in improvisatory and semi-improvi
     </script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>GLightbox();</script>
+    <script>
+    (function () {
+      // Two-line threshold: if single-line font-size falls below this (px), switch to 2-line mode
+      var TWO_LINE_THRESHOLD = 32;
+
+      function fitTitle(el) {
+        var container = el.parentElement;
+
+        // Always allow wrapping and constrain width so container isn't pushed by the element
+        el.style.whiteSpace = 'normal';
+        el.style.maxWidth = '100%';
+        var containerWidth = container.clientWidth;
+        if (!containerWidth) return;
+
+        // Phase 1: try single line
+        el.style.whiteSpace = 'nowrap';
+        var lo = 1, hi = 400, mid;
+        for (var i = 0; i < 22; i++) {
+          mid = (lo + hi) / 2;
+          el.style.fontSize = mid + 'px';
+          if (el.scrollWidth <= containerWidth) lo = mid;
+          else hi = mid;
+        }
+
+        // Always restore wrapping after single-line probe
+        el.style.whiteSpace = 'normal';
+
+        if (lo >= TWO_LINE_THRESHOLD) {
+          el.style.fontSize = lo + 'px';
+          return; // fits nicely on one line
+        }
+
+        // Phase 2: allow two lines — find largest size that stays within 2 lines
+        lo = 1; hi = 400;
+        for (var j = 0; j < 22; j++) {
+          mid = (lo + hi) / 2;
+          el.style.fontSize = mid + 'px';
+          var lh = parseFloat(getComputedStyle(el).lineHeight) || mid * 1.2;
+          if (el.scrollHeight <= lh * 2.15) lo = mid;
+          else hi = mid;
+        }
+        el.style.fontSize = lo + 'px';
+      }
+
+      function fitAll() {
+        document.querySelectorAll('.h1-fill').forEach(fitTitle);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', fitAll);
+      } else {
+        fitAll();
+      }
+
+      if (window.ResizeObserver) {
+        var ro = new ResizeObserver(function () { fitAll(); });
+        document.querySelectorAll('.h1-fill').forEach(function (el) {
+          ro.observe(el.parentElement);
+        });
+      } else {
+        var resizeTimer;
+        window.addEventListener('resize', function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(fitAll, 100);
+        });
+      }
+    }());
+    </script>
   </body>
 </html>

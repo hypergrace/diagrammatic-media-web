@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   </head>
   <body>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <div class="mobile-topbar" id="mobile-topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
     <div class="simple-shell">
       <aside class="simple-left" id="sidebar">
         <nav>
           <a href="/">HOME</a> | <a href="/news/">NEWS</a> | <a href="/about/">ABOUT</a> | <a href="/cv">CV</a>
         </nav>
-        <h2>Categories</h2>
+  
         {%- set categoryOrder = [
           {key: "performance",             label: "performance"},
           {key: "installation-visual-art", label: "installation + visual art"},
@@ -64,5 +66,73 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>GLightbox();</script>
+    <script>
+    (function () {
+      // Two-line threshold: if single-line font-size falls below this (px), switch to 2-line mode
+      var TWO_LINE_THRESHOLD = 32;
+
+      function fitTitle(el) {
+        var container = el.parentElement;
+
+        // Always allow wrapping and constrain width so container isn't pushed by the element
+        el.style.whiteSpace = 'normal';
+        el.style.maxWidth = '100%';
+        var containerWidth = container.clientWidth;
+        if (!containerWidth) return;
+
+        // Phase 1: try single line
+        el.style.whiteSpace = 'nowrap';
+        var lo = 1, hi = 400, mid;
+        for (var i = 0; i < 22; i++) {
+          mid = (lo + hi) / 2;
+          el.style.fontSize = mid + 'px';
+          if (el.scrollWidth <= containerWidth) lo = mid;
+          else hi = mid;
+        }
+
+        // Always restore wrapping after single-line probe
+        el.style.whiteSpace = 'normal';
+
+        if (lo >= TWO_LINE_THRESHOLD) {
+          el.style.fontSize = lo + 'px';
+          return; // fits nicely on one line
+        }
+
+        // Phase 2: allow two lines — find largest size that stays within 2 lines
+        lo = 1; hi = 400;
+        for (var j = 0; j < 22; j++) {
+          mid = (lo + hi) / 2;
+          el.style.fontSize = mid + 'px';
+          var lh = parseFloat(getComputedStyle(el).lineHeight) || mid * 1.2;
+          if (el.scrollHeight <= lh * 2.15) lo = mid;
+          else hi = mid;
+        }
+        el.style.fontSize = lo + 'px';
+      }
+
+      function fitAll() {
+        document.querySelectorAll('.h1-fill').forEach(fitTitle);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', fitAll);
+      } else {
+        fitAll();
+      }
+
+      if (window.ResizeObserver) {
+        var ro = new ResizeObserver(function () { fitAll(); });
+        document.querySelectorAll('.h1-fill').forEach(function (el) {
+          ro.observe(el.parentElement);
+        });
+      } else {
+        var resizeTimer;
+        window.addEventListener('resize', function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(fitAll, 100);
+        });
+      }
+    }());
+    </script>
   </body>
 </html>

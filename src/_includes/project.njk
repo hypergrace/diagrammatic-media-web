@@ -4,8 +4,8 @@ tags: project
 
 ---
 <div>
-	<h1>{{ title }}</h1>
-	<h5 style="text-align:left">{{ subtitle }} ({{ year }})</h5>
+	<h1 class="h1-fill">{{ title }}</h1>
+	<h5 class="h5-subtitle" style="text-align:left">{{ subtitle }} ({{ year }})</h5>
 
 
 	{% if projecttags %}
@@ -16,6 +16,14 @@ tags: project
 				<a href="/projects/{{ cleanTag | slug }}/">#{{ cleanTag }}</a>{% if not loop.last %}, {% endif %}
 			{%- endfor -%}
 		</p>
+	{% endif %}
+
+	{% if links %}
+		<div class="project-links">
+			{%- for link in links -%}
+				<a href="{{ link.url }}" class="project-link-btn" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+			{%- endfor -%}
+		</div>
 	{% endif %}
 
 	{% if collaborators %}

@@ -15,7 +15,6 @@ collaborators:
 series: "textural embodiments"
 ---
 
-category: performance
 {% include "auto-gallery.njk" %}
 
 ## Responsive Sound Overview

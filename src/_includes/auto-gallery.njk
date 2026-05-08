@@ -3,7 +3,12 @@
   Reads images from /projects/{slug}/gallery/ via projectGalleries data.
   project_folder is auto-derived from page.url; override via frontmatter if needed.
   gallery_columns  — grid columns (default 3)
-  gallery_preview  — images shown before "Show all" button (default 3)
+  gallery_preview  — images shown before "Show all" button (default 3, only applies when total is 7–25)
+
+  Rules:
+    < 7 images  → show all, no button
+    7–25 images → show gallery_preview initially, "Show all" button reveals rest
+    > 25 images → show first 25, "Load more" button loads 25 at a time
 {% endcomment %}
 {% unless project_folder %}
   {% assign url_parts = page.url | split: "/" %}
@@ -15,7 +20,9 @@
   {% assign cols        = gallery_columns | default: 3 %}
   {% assign preview     = gallery_preview | default: 3 %}
   {% assign total       = project_images.size %}
-  {% if total > preview %}{% assign truncated = true %}{% else %}{% assign truncated = false %}{% endif %}
+  {% if total >= 7 %}{% assign truncated = true %}{% else %}{% assign truncated = false %}{% endif %}
+  {% if total > 25 %}{% assign load_more = true %}{% else %}{% assign load_more = false %}{% endif %}
+  {% if load_more %}{% assign initial_count = 25 %}{% else %}{% assign initial_count = preview %}{% endif %}
 
 <div class="photo-gallery{% if truncated %} gallery-truncated{% endif %}"
      data-columns="{{ cols }}"
@@ -23,7 +30,7 @@
   <div class="gallery-grid">
     {% for image in project_images %}
     {% assign caption = image.name | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
-    <div class="gallery-item"{% if forloop.index0 >= preview %} data-preview-hidden{% endif %}>
+    <div class="gallery-item"{% if truncated and forloop.index0 >= initial_count %} data-preview-hidden{% endif %}>
       <a href="{{ image.path }}"
          class="glightbox"
          data-gallery="{{ gallery_id }}"
@@ -43,7 +50,7 @@
 
   {% if truncated %}
   <button class="gallery-expand-btn" id="{{ gallery_id }}-expand-btn">
-    Show all {{ total }} images ↓
+    {% if load_more %}Load more ↓{% else %}Show all {{ total }} images ↓{% endif %}
   </button>
   {% endif %}
 </div>
@@ -52,12 +59,35 @@
 (function () {
   var wrap = document.getElementById('{{ gallery_id }}-wrap');
   var expandBtn = document.getElementById('{{ gallery_id }}-expand-btn');
+  {% if load_more %}
+  var batchSize = 25;
+  if (expandBtn) {
+    function updateBtn() {
+      var remaining = wrap.querySelectorAll('[data-preview-hidden]').length;
+      if (remaining === 0) {
+        expandBtn.style.display = 'none';
+        wrap.classList.remove('gallery-truncated');
+      } else {
+        expandBtn.textContent = 'Load more (' + remaining + ' remaining) \u2193';
+      }
+    }
+    expandBtn.addEventListener('click', function () {
+      var hidden = wrap.querySelectorAll('[data-preview-hidden]');
+      Array.prototype.slice.call(hidden, 0, batchSize).forEach(function (el) {
+        el.removeAttribute('data-preview-hidden');
+      });
+      updateBtn();
+    });
+    updateBtn();
+  }
+  {% else %}
   if (expandBtn) {
     expandBtn.addEventListener('click', function () {
       wrap.classList.remove('gallery-truncated');
       expandBtn.style.display = 'none';
     });
   }
+  {% endif %}
 }());
 </script>
 

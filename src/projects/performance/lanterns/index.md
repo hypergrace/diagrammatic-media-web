@@ -5,7 +5,7 @@ title: lanterns
 year : 2017-2019
 layout: project.njk
 date: 2017-07-07
-projecttags: "installation,responsive-media,installation,workshop,sound,collaboration,performance,technology,new-materialism,posthumanities,dance,embodiment"
+projecttags: "installation,responsive-media,installation,workshop,sound,max-msp,spatial-sound,arduino,collaboration,performance,technology,new-materialism,posthumanities,dance,embodiment"
 header: lanterns.jpg
 series: "textural embodiments"
 
@@ -18,7 +18,7 @@ I worked in collaboration with dancer/choreographer Britta Joy Peterson and ligh
 
 The work was hosted by Synthesis Center at ASU, where it was shown publicly in workshops and performances. We performed with the system at MOCO 2017 at Goldsmiths in London.
 
-I designed the physical devices, and composed the responsive algorithmic sonic and lightning behaviors. I used hacked an Arduino into GameTrak controllers to sense approximately the physical movement vectors and speed of the lanterns. Arduinos sent OSC over ethernet to a computer running MaxMSP, which spatialized sound driven by speed, acceleration, and each lantern's physical proximity to one another. Max also sent lighting behaviors out over DMX to the lantern's dimmerpacks.
+I designed the physical devices, and composed the responsive algorithmic sonic and lightning behaviors. I used hacked an Arduino into salvaged GameTrak controllers to sense approximately the physical movement vectors and speed of the lanterns. Arduinos sent OSC over ethernet to a computer running MaxMSP, which spatialized sound driven by speed, acceleration, and each lantern's physical proximity to one another. Max also sent lighting behaviors out over DMX to the lantern's dimmerpacks.
 
 ### performance and workshop documentation
 

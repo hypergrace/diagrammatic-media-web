@@ -8,6 +8,22 @@ subtitle: a 9-month durational conference gathering, microresidency, and publica
 header: slomoco.jpg
 projecttags: "movement-and-computing,organizational-praxis,speculative-design"
 series: "socioaesthetic events"
+collaborators:
+    - Megan Young
+    - Hannah Tardie
+    - Will Hallett
+    - Lisa Jamhoury
+    - Ri Lindegren
+    - Madoka Clark
+    - Renee Carmichael
+    - Shomit Barua 
+links: 
+    - label: "SloMoCo Website"
+      link: https://slo.movementcomputing.org 
+    - label: "Movement and Computing"
+      link: https://movementcomputing.org 
+    - label: "SloMoCo Instagram"
+      link: https://www.instagram.com/slo.moco
 ---
 
 
@@ -15,11 +31,11 @@ series: "socioaesthetic events"
 
 ## About
 
-SloMoCo was a durational event-experiment sponsored by the MOCO (Movement and Computing) steering committee and community which ran from March to December 2021. SloMoCo is refiguring the conference form via global collaborations in collective knowledge-production, cybernetically informed learning-making structurations, and telematically mediated field practice. SloMoCo temporally (explodes, augments, prolates) the event conference as a site of knowledge production.
+SloMoCo was a durational event-experiment sponsored by the [MOCO (Movement and Computing)](https://www.movementcomputing.org/) steering committee and community which ran from March to December 2021. SloMoCo is refiguring the conference form via global collaborations in collective knowledge-production, cybernetically informed learning-making structurations, and telematically mediated field practice. SloMoCo temporally (explodes, augments, prolates) the event conference as a site of knowledge production.
 
 SloMoCo hosted a total of over fifty groups and individuals of artists and researchers. In the Spring, we were joined by twenty-five projects, nineteen in the Summer, and twelve in the Fall.
 
-Participants documented their work in an instance of the Manifold app, which was  converted post-hoc to this [documentation archive](https://slo.movementcomputing.org/index.html). 
+Participants documented their work in an instance of the Manifold app, which was converted post-hoc to this [documentation archive](https://slo.movementcomputing.org/index.html). 
 
 I designed and ran SloMoCo with a small-team of volunteer chairs, mostly graduate students. To encourage open access to a conference that usually costs more than $400 in conference registration alone, there was no cost to participate.
 
@@ -39,8 +55,8 @@ Living Code and Sharing Abundance SLSA panel, Megan Young, Roopa Vasudevan, Kate
 - quidanz technique, sejo
 - Recessed,	Maya Man and Heidi Latski
 - Thomas DeFranz, Living Code & Sharing Abundance
-- SIGN STEALING,	Megan Young	microresidency	spring and summer
-- skin hunger,	Courtney Brown, Brent Brimhall, Ira Greenberg, and Melanie Clemmons	microresidency	summer and fall
+- SIGN STEALINGMegan Young	
+- skin hunger,	Courtney Brown, Brent Brimhall, Ira Greenberg, and Melanie Clemmons	
 - SoundBrush,	Emil Berzen
 - they told stories, Xavier Nokes
 - TOUCH EXPERIMENTS, Nina Sarnelle and Selwa Sweidan
@@ -48,8 +64,8 @@ Living Code and Sharing Abundance SLSA panel, Megan Young, Roopa Vasudevan, Kate
 - You, Me, and Our Computers, Lisa Jamhoury
 - Wild, Wild West, Brandon Sward
 - The Firebird, Fernando Gregório
-- [ALT]SOLAS,	Xavier Nokes, Ri Lindegren, Pavan Turaga, Max Bernstein + Olivia Hernandez
-biomechanics and dance workshop	Antonia Zaferiou & Teal Darkenwald	workshop	fall
+- [ALT]SOLAS, Xavier Nokes, Ri Lindegren, Pavan Turaga, Max Bernstein + Olivia Hernandez
+biomechanics and dance workshop	Antonia Zaferiou & Teal Darkenwald
 - Counterfactual, stalgia grigg
 - Deepfake Movement Studies,	Ian Heisters with StratoFyzika and Daria Kaufman
 - Hybrid Postbodies, Magdalini Grigoriadou
@@ -57,7 +73,7 @@ biomechanics and dance workshop	Antonia Zaferiou & Teal Darkenwald	workshop	fall
 - INTIMAL,	Ximena Alarcón
 - (In)Visible Labor,	Jessica Rajko
 - Kenopsia, Monica Duncan and Amy Larimer
-- Unison and the Technology of Busby Berkeley's Dancing Girls, MVLab (Jenny Oyallon-Koloski, Mike Junokas, Sarah Mininsohn, and Kayt MacMaster
+- Unison and the Technology of Busby Berkeley's Dancing Girls, MVLab (Jenny Oyallon-Koloski, Mike Junokas, Sarah Mininsohn, and Kayt MacMaster)
 - Order in the Eye of the Beholder, Belinda McGuire Dance Projects
 - The Placeholder Group,	Kavi, Renee Carmichael, Emory Martin, Michael Palumbo
 - The Raisin Truck Makes Raisins. Daniel Lichtman
