@@ -32,10 +32,10 @@ Recordings:
 
 <iframe style="border: 0; width: 100%; height: 100%;" src="https://bandcamp.com/EmbeddedPlayer/album=3384926459/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless></iframe>
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/142010978?h=4a78a82f27" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/142010978?h=4a78a82f27" width="100%"   style="border: 0; width: 100%; height: 100%;"frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/142010978?h=4a78a82f27" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/142010978?h=4a78a82f27" style="border: 0; width: 100%; height: 100%;"referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/142696896?h=6e50b2052d" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/142696896?h=6e50b2052d" style="border: 0; width: 100%; height: 100%;"referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/142696843?h=90894965b2" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/142696843?h=90894965b2" style="border: 0; width: 100%; height: 100%;" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>

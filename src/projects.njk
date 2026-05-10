@@ -24,7 +24,7 @@ cleanTag not in uniqueHashtags -%} {%- set uniqueHashtags =
 </div>
 
 <div class="projects-grid" id="projects-grid">
-  {%- for post in collections.project | reverse -%}
+  {%- for post in collections.project | sortByYearDesc -%}
   <div
     class="project-tile"
     data-hashtags="{%- if post.data.projecttags -%}{{ post.data.projecttags }}{%- endif -%}"

@@ -2,7 +2,7 @@
 category: writing-research
 year: 2025
 layout: project.njk
-date: 2025-12-01
+date: 2025-09-01
 title: Symbols, Signals, and Sigils 
 subtitle: artist book
 header: solar-winds.png

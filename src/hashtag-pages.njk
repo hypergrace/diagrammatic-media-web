@@ -12,7 +12,7 @@ eleventyComputed:
 <h2>#{{ hashtag }}</h2>
 
 <ul>
-  {%- for project in collections.project -%}
+  {%- for project in collections.project | sortByYearDesc -%}
     {%- if project.data.projecttags -%}
       {%- set tagArray = project.data.projecttags.split(',') -%}
       {%- set cleanTags = [] -%}

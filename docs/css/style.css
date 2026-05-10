@@ -907,24 +907,29 @@ h6 {
 }
 
 .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  position: relative;
+  /* height and item positions set by JS masonry */
 }
 
 .portfolio-item {
+  position: absolute;
   display: block;
+  box-sizing: border-box;
   text-decoration: none;
   color: var(--text-color);
 }
 
-.portfolio-item img,
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .thumb-placeholder {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
   display: block;
-  background: #000;
+  background: #ccc;
 }
 
 .portfolio-item:hover img,
@@ -946,16 +951,4 @@ h6 {
 .portfolio-year {
   opacity: 0.55;
   font-size: 0.65rem;
-}
-
-@media (max-width: 720px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
 }

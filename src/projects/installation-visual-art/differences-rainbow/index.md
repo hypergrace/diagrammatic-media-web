@@ -1,7 +1,8 @@
 ---
 category: installation-visual-art
 title: difference's rainbow
-collaborators: Odette Stout
+collaborators: 
+    - Odette Stout
 date: 2025-11-10
 layout: project.njk
 year: 2025
@@ -39,3 +40,5 @@ Perception transmutes relation into reality. Not every thing perceives every thi
 Publication:
 
 "Difference's Rainbow", The Non-Standard, vol. 1, no. 3.
+
+{% include "auto-gallery.njk" %}

@@ -3,15 +3,15 @@ category: synthesizers
 layout: project.njk
 title: Concrete Mixer
 subtitle: four-voice stereo eurorack synthesizer audio/cv mixer
-date: 2024-04-01
-year: 2024
+date: 2024-04-10
+year: 2026
 tags: project
 projecttags: "synthesizers,analog-electronics,ccam,eurorack,workshop, ccam"
 header: alien-screamer2.jpg
 series: learning praxis
 ---
 
-category: synthesizers
+
 {% include "auto-gallery.njk" %}
 
 

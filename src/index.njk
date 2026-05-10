@@ -41,7 +41,7 @@ title: grace grace grace
 </div>
 
 <div class="portfolio-grid">
-  {%- for p in collections.project -%}
+  {%- for p in collections.project | reverse -%}
     {%- set urlParts = p.url.split('/') -%}
     {%- set slug = urlParts[3] -%}
     {%- set thumb = projectThumbnails[slug] -%}
@@ -58,40 +58,98 @@ title: grace grace grace
 
 <script>
 (function() {
-  const catBtns = document.querySelectorAll('.cat-filter');
-  const tagBtns = document.querySelectorAll('.tag-filter');
-  const items   = document.querySelectorAll('.portfolio-item');
+  var grid    = document.querySelector('.portfolio-grid');
+  var allItems = Array.from(document.querySelectorAll('.portfolio-item'));
+  var catBtns = document.querySelectorAll('.cat-filter');
+  var tagBtns = document.querySelectorAll('.tag-filter');
 
+  /* ---- masonry ---- */
+  function numCols() {
+    var w = window.innerWidth;
+    if (w <= 480) return 1;
+    if (w <= 720) return 2;
+    return 3;
+  }
+
+  function masonry() {
+    var visible = allItems.filter(function(el) { return el.style.display !== 'none'; });
+    var cols    = numCols();
+    var gap     = 12;
+    var gridW   = grid.offsetWidth;
+    var colW    = (gridW - gap * (cols - 1)) / cols;
+    var heights = new Array(cols).fill(0);
+
+    visible.forEach(function(item) {
+      item.style.width = colW + 'px';
+      // find leftmost shortest column → left-to-right row-by-row ordering
+      var minH = Math.min.apply(null, heights);
+      var col  = heights.indexOf(minH);
+      item.style.left = (col * (colW + gap)) + 'px';
+      item.style.top  = heights[col] + 'px';
+      heights[col]   += item.offsetHeight + gap;
+    });
+
+    grid.style.height = Math.max.apply(null, heights) + 'px';
+  }
+
+  /* wait for images then lay out */
+  function layoutWhenReady() {
+    var imgs = Array.from(grid.querySelectorAll('img'));
+    var pending = imgs.filter(function(img) { return !img.complete; });
+    if (pending.length === 0) { masonry(); return; }
+    var done = 0;
+    pending.forEach(function(img) {
+      function onLoad() { if (++done === pending.length) masonry(); }
+      img.addEventListener('load', onLoad);
+      img.addEventListener('error', onLoad);
+    });
+  }
+
+  /* ---- filter ---- */
   function clearActive() {
-    catBtns.forEach(b => b.classList.remove('active'));
-    tagBtns.forEach(b => b.classList.remove('active'));
+    catBtns.forEach(function(b) { b.classList.remove('active'); });
+    tagBtns.forEach(function(b) { b.classList.remove('active'); });
   }
 
   function filterItems(test) {
-    items.forEach(item => {
+    allItems.forEach(function(item) {
       item.style.display = test(item) ? '' : 'none';
     });
+    masonry();
   }
 
-  catBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+  catBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
       clearActive();
       btn.classList.add('active');
-      const key = btn.dataset.key;
-      filterItems(item => key === 'all' || item.dataset.category === key);
+      var key = btn.dataset.key;
+      filterItems(function(item) { return key === 'all' || item.dataset.category === key; });
     });
   });
 
-  tagBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+  tagBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
       clearActive();
       btn.classList.add('active');
-      const tag = btn.dataset.rawtag;
-      filterItems(item => {
+      var tag = btn.dataset.rawtag;
+      filterItems(function(item) {
         if (!item.dataset.tags) return false;
-        return item.dataset.tags.split(',').map(t => t.trim()).includes(tag);
+        return item.dataset.tags.split(',').map(function(t) { return t.trim(); }).includes(tag);
       });
     });
   });
+
+  /* ---- init & resize ---- */
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(masonry, 120);
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', layoutWhenReady);
+  } else {
+    layoutWhenReady();
+  }
 })();
 </script>

@@ -10,7 +10,7 @@ header: ptl1.jpg
 series: "sigilistic perception"
 
 ---
-media: 20’ x 8’. Plywood, drywall paint, custom PCBs, microcontrollers, electric cabling, car speakers, wood, plastic, iridescent film, camouflage netting, projection, computer, real-time sound and projection algorithms.
+media: Plywood, drywall paint, custom PCBs, microcontrollers, electric cabling, car speakers, wood, plastic, iridescent film, camouflage netting, projection, computer, real-time sound and projection algorithms.
 
 {% youtube "imncDuGJrL8" %}
 
