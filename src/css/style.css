@@ -908,7 +908,25 @@ h6 {
 
 .portfolio-grid {
   position: relative;
+  opacity: 0;
+  transition: opacity 0.25s ease;
   /* height and item positions set by JS masonry */
+}
+
+.portfolio-grid.grid-visible {
+  opacity: 1;
+}
+
+#grid-loader {
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  opacity: 0.45;
+}
+
+#grid-loader.hidden {
+  display: none;
 }
 
 .portfolio-item {

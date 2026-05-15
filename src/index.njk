@@ -40,6 +40,7 @@ title: grace grace grace
   </div>
 </div>
 
+<div id="grid-loader">loading&hellip;</div>
 <div class="portfolio-grid">
   {%- for p in collections.project | reverse -%}
     {%- set urlParts = p.url.split('/') -%}
@@ -59,9 +60,19 @@ title: grace grace grace
 <script>
 (function() {
   var grid    = document.querySelector('.portfolio-grid');
+  var loader  = document.getElementById('grid-loader');
   var allItems = Array.from(document.querySelectorAll('.portfolio-item'));
   var catBtns = document.querySelectorAll('.cat-filter');
   var tagBtns = document.querySelectorAll('.tag-filter');
+
+  function showGrid() {
+    if (loader) loader.classList.add('hidden');
+    grid.classList.add('grid-visible');
+  }
+
+  function hideGrid() {
+    grid.classList.remove('grid-visible');
+  }
 
   /* ---- masonry ---- */
   function numCols() {
@@ -73,20 +84,35 @@ title: grace grace grace
 
   function masonry() {
     var visible = allItems.filter(function(el) { return el.style.display !== 'none'; });
+    if (!visible.length) return;
     var cols    = numCols();
     var gap     = 12;
     var gridW   = grid.offsetWidth;
+    if (!gridW) return;
     var colW    = (gridW - gap * (cols - 1)) / cols;
-    var heights = new Array(cols).fill(0);
 
+    // Pass 1: write all widths (no reads)
     visible.forEach(function(item) {
       item.style.width = colW + 'px';
-      // find leftmost shortest column → left-to-right row-by-row ordering
+    });
+
+    // Force reflow on an actual abs-positioned child
+    // (grid.offsetHeight won't do it since children are out of flow)
+    void visible[0].offsetHeight;
+
+    // Pass 2: read ALL heights first (no writes yet)
+    var itemHeights = visible.map(function(item) {
+      return item.offsetHeight;
+    });
+
+    // Pass 3: write all positions (no reads)
+    var heights = new Array(cols).fill(0);
+    visible.forEach(function(item, i) {
       var minH = Math.min.apply(null, heights);
       var col  = heights.indexOf(minH);
       item.style.left = (col * (colW + gap)) + 'px';
       item.style.top  = heights[col] + 'px';
-      heights[col]   += item.offsetHeight + gap;
+      heights[col]   += itemHeights[i] + gap;
     });
 
     grid.style.height = Math.max.apply(null, heights) + 'px';
@@ -96,10 +122,12 @@ title: grace grace grace
   function layoutWhenReady() {
     var imgs = Array.from(grid.querySelectorAll('img'));
     var pending = imgs.filter(function(img) { return !img.complete; });
-    if (pending.length === 0) { masonry(); return; }
+    if (pending.length === 0) { masonry(); showGrid(); return; }
     var done = 0;
     pending.forEach(function(img) {
-      function onLoad() { if (++done === pending.length) masonry(); }
+      function onLoad() {
+        if (++done === pending.length) { masonry(); showGrid(); }
+      }
       img.addEventListener('load', onLoad);
       img.addEventListener('error', onLoad);
     });
@@ -142,8 +170,12 @@ title: grace grace grace
   /* ---- init & resize ---- */
   var resizeTimer;
   window.addEventListener('resize', function() {
+    hideGrid();
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(masonry, 120);
+    resizeTimer = setTimeout(function() {
+      // rAF ensures we measure after the browser has committed the new viewport size
+      requestAnimationFrame(function() { masonry(); showGrid(); });
+    }, 150);
   });
 
   if (document.readyState === 'loading') {
