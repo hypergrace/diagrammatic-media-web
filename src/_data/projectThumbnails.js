@@ -1,6 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 
+// Pre-generated resized thumbnails live here (created by scripts/resize-thumbs.js)
+const THUMBS_DIR = path.resolve(__dirname, "../../docs/assets/thumbs");
+
 module.exports = function () {
   const projectsDir = "./src/projects";
   const thumbnails = {};
@@ -32,7 +35,15 @@ module.exports = function () {
                 )
                 .sort();
               if (files.length > 0) {
-                thumbnails[slug] = `/projects/${cat}/${slug}/thumbnail/${files[0]}`;
+                const filename   = files[0];
+                const resizedName = `${slug}-${filename}`;
+                const resizedPath = path.join(THUMBS_DIR, resizedName);
+                // Prefer the pre-resized copy in docs/assets/thumbs/ if it exists
+                if (fs.existsSync(resizedPath)) {
+                  thumbnails[slug] = `/assets/thumbs/${resizedName}`;
+                } else {
+                  thumbnails[slug] = `/projects/${cat}/${slug}/thumbnail/${filename}`;
+                }
               }
             } catch (err) {
               // skip missing dirs

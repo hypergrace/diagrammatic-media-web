@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "sharp": "^0.34.5"
   },
   "dependencies": {
     "eleventy-plugin-clean": "^1.2.6",
@@ -9,6 +10,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "resize-thumbs": "node scripts/resize-thumbs.js",
+    "prebuild": "node scripts/resize-thumbs.js",
+    "prestart": "node scripts/resize-thumbs.js",
     "start": "eleventy --serve",
     "build": "eleventy",
     "clean": "node -e \"const fs=require('fs');fs.rmSync('./docs',{recursive:true,force:true});\" && eleventy"

@@ -10,3 +10,7 @@ projecttags: "cultural-geography,writing,responsive-media,installation,workshop,
 header: renao.png
 series: alter-informatics and diagrammatic media
 ---
+
+
+**2019 |** _Idiotic Resonances_. Stadt Land Fluss. Berlin, DE. Media installation.
+
