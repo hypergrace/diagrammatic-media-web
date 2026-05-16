@@ -12,8 +12,11 @@ header: renao.png
 series: alter-informatics and diagrammatic media
 ---
 
+<<<<<<< Updated upstream
 **2019 |** _Idiotic Resonances_. Stadt Land Fluss. Berlin, DE. Media installation.
 
+=======
+>>>>>>> Stashed changes
 media: raspberrypi, 3-channel video, 3-channel sound + haptic van seat
 
 ### shows

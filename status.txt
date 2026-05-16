@@ -1,0 +1,424 @@
+M  .eleventy.js
+A  build.log
+A  build_output.log
+A  build_output.txt
+A  build_output_check.log
+M  docs/about/index.html
+ M docs/assets/headers/alien-screamer2.jpg
+D  docs/assets/headers/headshot.png
+D  docs/assets/headers/iwantanai.jpg
+ M docs/assets/headers/ptl1.jpg
+D  docs/assets/headers/slomoco.jpg
+ M docs/assets/headers/solar-winds.png
+MM docs/assets/img/headshot.jpg
+A  docs/assets/img/signal-2025-04-16-072029.JPG
+ M docs/assets/pdf/TechniquesInTheMaking.pdf
+ M docs/assets/pdf/cv.pdf
+ M docs/assets/pdf/diagrammatic-media.pdf
+ M docs/assets/pdf/ensemble.pdf
+ M docs/assets/pdf/gift.pdf
+ M docs/assets/pdf/mess-of-the-matter.pdf
+ M docs/assets/pdf/moco2019paper.pdf
+ M docs/assets/pdf/moco2019poster.pdf
+ M docs/assets/pdf/portfolio.pdf
+ M docs/assets/pdf/prospectus.pdf
+ M docs/assets/pdf/renao.pdf
+ M docs/assets/pdf/sheridan1.pdf
+ M docs/assets/pdf/sheridan2.pdf
+ M docs/assets/pdf/vs.overview.pdf
+M  docs/before/index.html
+M  docs/css/style.css
+M  docs/cv-teaching/index.html
+UU docs/index.html
+M  docs/news/index.html
+M  docs/now/index.html
+M  docs/projects/alternate-economies/index.html
+M  docs/projects/alternative-economies/index.html
+M  docs/projects/ambient/index.html
+M  docs/projects/analog-electronics/index.html
+M  docs/projects/arduino/index.html
+M  docs/projects/artist-book/index.html
+M  docs/projects/carlos-reygadas/index.html
+M  docs/projects/ccam/index.html
+M  docs/projects/co-prosperity-sphere/index.html
+M  docs/projects/collaboration/index.html
+M  docs/projects/conference/index.html
+M  docs/projects/cooperative-economies/index.html
+M  docs/projects/creative-coding/index.html
+M  docs/projects/critical-theory/index.html
+M  docs/projects/cryptocurrency/index.html
+M  docs/projects/cultural-geography/index.html
+ M "docs/projects/curation-organization/phun-experiencing-the-posthuman/gallery/unnamed (1).jpg"
+M  docs/projects/curation-organization/phun-experiencing-the-posthuman/index.html
+ M docs/projects/curation-organization/phun-experiencing-the-posthuman/thumbnail/1.jpg
+ M docs/projects/curation-organization/phun-learning-and-trust/gallery/20200222_123034.jpg
+ M docs/projects/curation-organization/phun-learning-and-trust/gallery/20200222_123054.jpg
+ M docs/projects/curation-organization/phun-learning-and-trust/gallery/20200222_123059.jpg
+ M docs/projects/curation-organization/phun-learning-and-trust/gallery/20200222_123101.jpg
+ M docs/projects/curation-organization/phun-learning-and-trust/gallery/20200222_124254.jpg
+ M docs/projects/curation-organization/phun-learning-and-trust/gallery/z.jpg
+M  docs/projects/curation-organization/phun-learning-and-trust/index.html
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/57186782878__6716EA61-24D4-4CCF-97BF-F57B0BF9A13A.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/57198290552__6DCE9E0A-70DE-492E-AE82-9CFC3FB8D5A9.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/57198291295__50F5EB17-CA4F-4862-8734-A97C4EC690BA.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3957.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3958.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3959.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3960.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3961.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3962.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3963.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3964.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3965.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3966.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3967.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3968.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3969.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3970.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3971.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3972.JPG
+ M docs/projects/curation-organization/phun-legacies-of-cybernetics/gallery/IMG_3973.JPG
+M  docs/projects/curation-organization/phun-legacies-of-cybernetics/index.html
+ M docs/projects/curation-organization/phun-posthuman-politics/gallery/KP_11_17_w_bleed_monday.jpg
+ M docs/projects/curation-organization/phun-posthuman-politics/gallery/RG_11_17_w_bleed_monday.jpg
+ M docs/projects/curation-organization/phun-posthuman-politics/gallery/conf_11_17_bleed_monday.jpg
+M  docs/projects/curation-organization/phun-posthuman-politics/index.html
+D  docs/projects/curation-organization/phun-posthuman-politics/thumbnail/1.jpg
+ M docs/projects/curation-organization/phun-posthuman-politics/thumbnail/conf_11_17_bleed_monday.jpg
+ M docs/projects/curation-organization/slomoco/gallery/altsolas1.png
+ M docs/projects/curation-organization/slomoco/gallery/altsolas4.jpg
+ M docs/projects/curation-organization/slomoco/gallery/altsolas5.jpg
+ M docs/projects/curation-organization/slomoco/gallery/altsolas6.jpg
+ M docs/projects/curation-organization/slomoco/gallery/altsolas7.png
+ M docs/projects/curation-organization/slomoco/gallery/biomechanics.jpg
+ M docs/projects/curation-organization/slomoco/gallery/bodymouth.JPG
+ M docs/projects/curation-organization/slomoco/gallery/bread.png
+ M docs/projects/curation-organization/slomoco/gallery/channel1.png
+ M docs/projects/curation-organization/slomoco/gallery/channel3.png
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses10.jpg
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses11.jpg
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses15.jpg
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses19.jpg
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses23.jpg
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses26.jpg
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses28.jpg
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses29.png
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses3.png
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses30.jpg
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses5.jpg
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses7.jpg
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses8.jpg
+ M docs/projects/curation-organization/slomoco/gallery/collectiveresponses9.jpg
+ M docs/projects/curation-organization/slomoco/gallery/common-language.png
+ M docs/projects/curation-organization/slomoco/gallery/community-game2.jpg
+ M docs/projects/curation-organization/slomoco/gallery/community-game3.jpg
+ M docs/projects/curation-organization/slomoco/gallery/community-game4.jpg
+ M docs/projects/curation-organization/slomoco/gallery/community-game4.png
+ M docs/projects/curation-organization/slomoco/gallery/community-game5.png
+ M docs/projects/curation-organization/slomoco/gallery/contours1.png
+ M docs/projects/curation-organization/slomoco/gallery/contours3.png
+ M docs/projects/curation-organization/slomoco/gallery/contours4.png
+ M docs/projects/curation-organization/slomoco/gallery/counterfactual.png
+ M docs/projects/curation-organization/slomoco/gallery/counterfactual2.png
+ M docs/projects/curation-organization/slomoco/gallery/critique.png
+ M docs/projects/curation-organization/slomoco/gallery/deepfake2.png
+ M docs/projects/curation-organization/slomoco/gallery/deepfake3.png
+ M docs/projects/curation-organization/slomoco/gallery/emergent2.JPG
+ M docs/projects/curation-organization/slomoco/gallery/emergent3.JPG
+ M docs/projects/curation-organization/slomoco/gallery/emergent4.JPG
+ M docs/projects/curation-organization/slomoco/gallery/fidelia.png
+ M docs/projects/curation-organization/slomoco/gallery/field-guide.png
+ M docs/projects/curation-organization/slomoco/gallery/field-guide2.png
+ M docs/projects/curation-organization/slomoco/gallery/firebird1.jpg
+ M docs/projects/curation-organization/slomoco/gallery/firebird2.png
+ M docs/projects/curation-organization/slomoco/gallery/firebird3.png
+ M docs/projects/curation-organization/slomoco/gallery/firebird4.png
+ M docs/projects/curation-organization/slomoco/gallery/firebird5.png
+ M docs/projects/curation-organization/slomoco/gallery/firebird6.jpg
+ M docs/projects/curation-organization/slomoco/gallery/firebird8.png
+ M docs/projects/curation-organization/slomoco/gallery/frame2.png
+ M docs/projects/curation-organization/slomoco/gallery/frames.png
+ M docs/projects/curation-organization/slomoco/gallery/frames1.png
+ M docs/projects/curation-organization/slomoco/gallery/frames2.jpg
+ M docs/projects/curation-organization/slomoco/gallery/frames3.jpeg
+ M docs/projects/curation-organization/slomoco/gallery/fromdata2.png
+ M docs/projects/curation-organization/slomoco/gallery/gathering.png
+ M docs/projects/curation-organization/slomoco/gallery/gvnc1.png
+ M docs/projects/curation-organization/slomoco/gallery/gvnc3.png
+ M docs/projects/curation-organization/slomoco/gallery/heat3.jpg
+ M docs/projects/curation-organization/slomoco/gallery/heat4.jpg
+ M docs/projects/curation-organization/slomoco/gallery/heat5.jpg
+ M docs/projects/curation-organization/slomoco/gallery/heat6.jpg
+ M docs/projects/curation-organization/slomoco/gallery/heat7.jpg
+ M docs/projects/curation-organization/slomoco/gallery/intimal.png
+ M docs/projects/curation-organization/slomoco/gallery/kenopsia2.jpg
+ M docs/projects/curation-organization/slomoco/gallery/kenopsia3.png
+ M docs/projects/curation-organization/slomoco/gallery/khora1.jpg
+ M docs/projects/curation-organization/slomoco/gallery/khora2.jpg
+ M docs/projects/curation-organization/slomoco/gallery/khora3.jpg
+ M docs/projects/curation-organization/slomoco/gallery/khora4.jpg
+ M docs/projects/curation-organization/slomoco/gallery/khora5.jpg
+ M docs/projects/curation-organization/slomoco/gallery/khora6.jpg
+ M docs/projects/curation-organization/slomoco/gallery/loss1.jpg
+ M docs/projects/curation-organization/slomoco/gallery/loss2.jpg
+ M docs/projects/curation-organization/slomoco/gallery/loss3.jpg
+ M docs/projects/curation-organization/slomoco/gallery/loss4.jpg
+ M docs/projects/curation-organization/slomoco/gallery/loss5.jpg
+ M docs/projects/curation-organization/slomoco/gallery/loss6.jpg
+ M docs/projects/curation-organization/slomoco/gallery/lydia.png
+ M docs/projects/curation-organization/slomoco/gallery/mask1.jpg
+ M docs/projects/curation-organization/slomoco/gallery/mask3.jpg
+ M docs/projects/curation-organization/slomoco/gallery/mocoedu.png
+ M docs/projects/curation-organization/slomoco/gallery/overlap1.png
+ M docs/projects/curation-organization/slomoco/gallery/overlap2.png
+ M docs/projects/curation-organization/slomoco/gallery/overlap3.png
+ M docs/projects/curation-organization/slomoco/gallery/overlap4.png
+ M docs/projects/curation-organization/slomoco/gallery/placeholder1.png
+ M docs/projects/curation-organization/slomoco/gallery/placeholder10.png
+ M docs/projects/curation-organization/slomoco/gallery/placeholder11.png
+ M docs/projects/curation-organization/slomoco/gallery/placeholder4.png
+ M docs/projects/curation-organization/slomoco/gallery/placeholder5.png
+ M docs/projects/curation-organization/slomoco/gallery/placeholder6.png
+ M docs/projects/curation-organization/slomoco/gallery/placeholder7.png
+ M docs/projects/curation-organization/slomoco/gallery/placeholder8.png
+ M docs/projects/curation-organization/slomoco/gallery/placeholder9.png
+ M docs/projects/curation-organization/slomoco/gallery/prologue1.png
+ M docs/projects/curation-organization/slomoco/gallery/prologue2.png
+ M docs/projects/curation-organization/slomoco/gallery/prologue3.png
+ M docs/projects/curation-organization/slomoco/gallery/provocations-workshop.jpg
+ M docs/projects/curation-organization/slomoco/gallery/raisin1.png
+ M docs/projects/curation-organization/slomoco/gallery/raisin10.jpg
+ M docs/projects/curation-organization/slomoco/gallery/raisin11.png
+ M docs/projects/curation-organization/slomoco/gallery/raisin2.png
+ M docs/projects/curation-organization/slomoco/gallery/raisin5.jpeg
+ M docs/projects/curation-organization/slomoco/gallery/raisin6.jpeg
+ M docs/projects/curation-organization/slomoco/gallery/raisin7.jpeg
+ M docs/projects/curation-organization/slomoco/gallery/raisin8.jpg
+ M docs/projects/curation-organization/slomoco/gallery/raisin9.jpg
+ M docs/projects/curation-organization/slomoco/gallery/rajko.jpg
+ M docs/projects/curation-organization/slomoco/gallery/sejo.jpg
+ M docs/projects/curation-organization/slomoco/gallery/skin2.jpg
+ M docs/projects/curation-organization/slomoco/gallery/skin3.jpg
+ M docs/projects/curation-organization/slomoco/gallery/skin4.jpg
+ M docs/projects/curation-organization/slomoco/gallery/spring1.png
+ M docs/projects/curation-organization/slomoco/gallery/spring2.jpg
+ M docs/projects/curation-organization/slomoco/gallery/summer1.jpg
+ M docs/projects/curation-organization/slomoco/gallery/summer2.jpg
+ M docs/projects/curation-organization/slomoco/gallery/sward.png
+ M docs/projects/curation-organization/slomoco/gallery/sympathetic1.PNG
+ M docs/projects/curation-organization/slomoco/gallery/sympathetic2.png
+ M docs/projects/curation-organization/slomoco/gallery/sympathetic3.PNG
+ M docs/projects/curation-organization/slomoco/gallery/sympathetic4.PNG
+ M docs/projects/curation-organization/slomoco/gallery/they1.jpg
+ M docs/projects/curation-organization/slomoco/gallery/they2.jpg
+ M docs/projects/curation-organization/slomoco/gallery/they3.jpg
+ M docs/projects/curation-organization/slomoco/gallery/they4.jpg
+ M docs/projects/curation-organization/slomoco/gallery/tilt4.jpg
+ M docs/projects/curation-organization/slomoco/gallery/tilt5.jpg
+ M docs/projects/curation-organization/slomoco/gallery/tilt6.jpg
+ M docs/projects/curation-organization/slomoco/gallery/tilting.jpg
+ M docs/projects/curation-organization/slomoco/gallery/timeenough1.jpg
+ M docs/projects/curation-organization/slomoco/gallery/timeenough2.png
+ M docs/projects/curation-organization/slomoco/gallery/to8.png
+ M docs/projects/curation-organization/slomoco/gallery/ton.jpg
+ M docs/projects/curation-organization/slomoco/gallery/ton.png
+ M docs/projects/curation-organization/slomoco/gallery/ton1.png
+ M docs/projects/curation-organization/slomoco/gallery/wild2.jpg
+M  docs/projects/curation-organization/slomoco/index.html
+M  docs/projects/curation-organization/ssoo/index.html
+ M docs/projects/curation-organization/ssoo/thumbnail/ssoo.png
+M  docs/projects/cybernetics/index.html
+M  docs/projects/daisy/index.html
+M  docs/projects/dance/index.html
+M  docs/projects/dissertation/index.html
+M  docs/projects/ecology/index.html
+M  docs/projects/education/index.html
+M  docs/projects/electronics-faire/index.html
+M  docs/projects/embodiment/index.html
+M  docs/projects/ensemble/index.html
+M  docs/projects/essay/index.html
+M  docs/projects/eurorack/index.html
+M  docs/projects/experimental-music/index.html
+M  docs/projects/gen/index.html
+M  docs/projects/generative-art/index.html
+UU docs/projects/index.html
+M  docs/projects/installation-visual-art/differences-rainbow/index.html
+ M docs/projects/installation-visual-art/differences-rainbow/thumbnail/IMG_6423.png
+D  docs/projects/installation-visual-art/portacular-resonances/gallery/idiot4.jpg
+ M docs/projects/installation-visual-art/portacular-resonances/gallery/install-wavepool.png
+D  docs/projects/installation-visual-art/portacular-resonances/gallery/install2.jpeg
+ M docs/projects/installation-visual-art/portacular-resonances/gallery/stady-land-fluss.png
+AM docs/projects/installation-visual-art/portacular-resonances/gallery/vlcsnap-2022-05-25-11h16m14s715.png
+AM docs/projects/installation-visual-art/portacular-resonances/gallery/vlcsnap-2022-05-25-11h25m05s367.png
+AM docs/projects/installation-visual-art/portacular-resonances/gallery/vlcsnap-2022-05-25-11h26m50s742.png
+UU docs/projects/installation-visual-art/portacular-resonances/index.html
+AM docs/projects/installation-visual-art/portacular-resonances/thumbnail/install-wavepool.png
+ M "docs/projects/installation-visual-art/post-tenebras-lux/gallery/Copy of C_P04948.jpg"
+ M "docs/projects/installation-visual-art/post-tenebras-lux/gallery/Copy of Install Shot.jpg"
+ M "docs/projects/installation-visual-art/post-tenebras-lux/gallery/DSC03195 (Large).jpg"
+ M "docs/projects/installation-visual-art/post-tenebras-lux/gallery/DSC03202 (Large).JPG"
+ M "docs/projects/installation-visual-art/post-tenebras-lux/gallery/DSC03205 (Large).JPG"
+ M docs/projects/installation-visual-art/post-tenebras-lux/gallery/IMG_4922.JPG
+M  docs/projects/installation-visual-art/post-tenebras-lux/index.html
+D  "docs/projects/installation-visual-art/post-tenebras-lux/thumbnail/DSC03195 (Large).jpg"
+D  "docs/projects/installation-visual-art/post-tenebras-lux/thumbnail/DSC03202 (Large).JPG"
+ M "docs/projects/installation-visual-art/post-tenebras-lux/thumbnail/DSC03205 (Large).JPG"
+M  docs/projects/installation-visual-art/renao/index.html
+A  docs/projects/installation-visual-art/renao/thumbnail/renao.png
+ M "docs/projects/installation-visual-art/solar-winds/gallery/A (Medium).png"
+ M "docs/projects/installation-visual-art/solar-winds/gallery/B (Medium).png"
+ M "docs/projects/installation-visual-art/solar-winds/gallery/C (Medium).png"
+ M "docs/projects/installation-visual-art/solar-winds/gallery/D (Medium).png"
+ M docs/projects/installation-visual-art/solar-winds/gallery/spread-corrected.png
+M  docs/projects/installation-visual-art/solar-winds/index.html
+ M docs/projects/installation-visual-art/solar-winds/thumbnail/solar-winds.png
+ M "docs/projects/installation-visual-art/tactical-finance/gallery/Screenshot 2026-05-07 141856.png"
+ M docs/projects/installation-visual-art/tactical-finance/gallery/rig0.jpg
+ M docs/projects/installation-visual-art/tactical-finance/gallery/rig1.jpg
+M  docs/projects/installation-visual-art/tactical-finance/index.html
+ M docs/projects/installation-visual-art/tactical-finance/thumbnail/rig1.jpg
+ M docs/projects/installation-visual-art/the-gift/gallery/gift1.png
+ M docs/projects/installation-visual-art/the-gift/gallery/gift2.png
+ M docs/projects/installation-visual-art/the-gift/gallery/gift3.png
+ M docs/projects/installation-visual-art/the-gift/gallery/river1.png
+ M docs/projects/installation-visual-art/the-gift/gallery/river2.png
+ M docs/projects/installation-visual-art/the-gift/gallery/river3.png
+M  docs/projects/installation-visual-art/the-gift/index.html
+AM docs/projects/installation-visual-art/the-gift/thumbnail/gift2.png
+M  docs/projects/installation-visual-art/thermal/index.html
+M  docs/projects/installation/index.html
+M  docs/projects/interactive-dance/index.html
+M  docs/projects/kinect/index.html
+M  docs/projects/larp/index.html
+M  docs/projects/live-electronics/index.html
+M  docs/projects/live-processing/index.html
+M  docs/projects/magic/index.html
+M  docs/projects/max-msp/index.html
+M  docs/projects/maxmsp/index.html
+M  docs/projects/media-arts-and-sciences/index.html
+M  docs/projects/media-theory/index.html
+M  docs/projects/movement-and-computing/index.html
+M  docs/projects/neurodiversity/index.html
+M  docs/projects/new-materialism/index.html
+M  docs/projects/organization/index.html
+M  docs/projects/organizational-praxis/index.html
+M  docs/projects/p5.js/index.html
+M  docs/projects/pedagogy/index.html
+M  docs/projects/perception/index.html
+M  docs/projects/performance/cello_electronics/index.html
+AM docs/projects/performance/gulch/gallery/image.png
+A  docs/projects/performance/gulch/gallery/image2.png
+M  docs/projects/performance/gulch/index.html
+AM docs/projects/performance/gulch/thumbnail/image.png
+A  docs/projects/performance/gulch/thumbnail/image2.png
+ M docs/projects/performance/hypergrace/gallery/DSC02222.JPEG
+ M docs/projects/performance/hypergrace/gallery/DSC02226.JPEG
+ M docs/projects/performance/hypergrace/gallery/DSC02227.JPEG
+ M docs/projects/performance/hypergrace/gallery/DSC02241.JPEG
+ M docs/projects/performance/hypergrace/gallery/DSC02243.JPEG
+ M docs/projects/performance/hypergrace/gallery/DSC02246.JPEG
+ M docs/projects/performance/hypergrace/gallery/DSC02247.JPEG
+M  docs/projects/performance/hypergrace/index.html
+M  docs/projects/performance/index.html
+M  docs/projects/performance/iwantanai/index.html
+ M docs/projects/performance/iwantanai/thumbnail/iwantanai.jpg
+M  docs/projects/performance/lanterns/index.html
+A  docs/projects/performance/lanterns/thumbnail/lanterns.jpg
+A  docs/projects/performance/lorkas/gallery/1236170.jpg
+A  docs/projects/performance/lorkas/gallery/5328543.jpg
+A  docs/projects/performance/lorkas/gallery/9510587.jpg
+A  docs/projects/performance/lorkas/gallery/a1848311459_2.jpg
+A  docs/projects/performance/lorkas/gallery/lorkas.png
+M  docs/projects/performance/lorkas/index.html
+A  docs/projects/performance/lorkas/thumbnail/a1848311459_2.jpg
+A  docs/projects/performance/lorkas/thumbnail/lorkas.png
+M  docs/projects/performance/visible-sketch/index.html
+M  docs/projects/phd/index.html
+M  docs/projects/phun/index.html
+M  docs/projects/post-human-network/index.html
+M  docs/projects/posthumanities/index.html
+M  docs/projects/process/index.html
+M  docs/projects/processing/index.html
+M  docs/projects/projection/index.html
+M  docs/projects/ray-wilson/index.html
+M  docs/projects/research/index.html
+M  docs/projects/responsive-media/index.html
+M  docs/projects/risograph/index.html
+M  docs/projects/sigil-magic/index.html
+M  docs/projects/sigils/index.html
+M  docs/projects/soldering/index.html
+M  docs/projects/sound/index.html
+M  docs/projects/spatial-audio/index.html
+M  docs/projects/spatial-sound/index.html
+D  docs/projects/spatialaudio/index.html
+M  docs/projects/speculative-design/index.html
+M  docs/projects/stable-diffusion/index.html
+M  docs/projects/symposia/index.html
+ M docs/projects/synthesizers/alien-screamer/gallery/4_26_24_Temple_Electronics_Fair_110_A.jpg
+ M docs/projects/synthesizers/alien-screamer/gallery/4_26_24_Temple_Electronics_Fair_112_A.jpg
+ M docs/projects/synthesizers/alien-screamer/gallery/4_26_24_Temple_Electronics_Fair_113_A.jpg
+ M docs/projects/synthesizers/alien-screamer/gallery/4_26_24_Temple_Electronics_Fair_114_A.jpg
+ M docs/projects/synthesizers/alien-screamer/gallery/4_26_24_Temple_Electronics_Fair_116_A.jpg
+ M docs/projects/synthesizers/alien-screamer/gallery/4_26_24_Temple_Electronics_Fair_118_A.jpg
+ M docs/projects/synthesizers/alien-screamer/gallery/4_26_24_Temple_Electronics_Fair_120_A.jpg
+ M docs/projects/synthesizers/alien-screamer/gallery/4_26_24_Temple_Electronics_Fair_126_A.jpg
+ M docs/projects/synthesizers/alien-screamer/gallery/4_26_24_Temple_Electronics_Fair_128_A.jpg
+M  docs/projects/synthesizers/alien-screamer/index.html
+M  docs/projects/synthesizers/concrete-mixer/index.html
+M  docs/projects/synthesizers/index.html
+M  docs/projects/technology/index.html
+M  docs/projects/video-art/index.html
+M  docs/projects/whitehead/index.html
+M  docs/projects/workshop/index.html
+M  docs/projects/writing-research/diagrammatic-media/index.html
+ M "docs/projects/writing-research/how-to-see-in-the-dark/gallery/printed matter by Mira Petrillo.JPG"
+M  docs/projects/writing-research/how-to-see-in-the-dark/index.html
+ M "docs/projects/writing-research/how-to-see-in-the-dark/thumbnail/printed matter by Mira Petrillo.JPG"
+M  docs/projects/writing-research/imposters/index.html
+M  docs/projects/writing-research/ntel/index.html
+M  docs/projects/writing-research/symbols-signals-sigils/index.html
+ M "docs/projects/writing-research/symbols-signals-sigils/thumbnail/Screenshot 2026-05-08 123614.png"
+M  docs/projects/writing/index.html
+A  src/_data/cv/sections.yml
+M  src/_includes/auto-gallery.njk
+M  src/_includes/simple.njk
+M  src/about.md
+M  src/assets/img/headshot.jpg
+M  src/css/style.css
+D  src/cv-cycling-print.njk
+D  src/cv-cycling.njk
+D  src/cv-print.njk
+D  src/cv-teaching-print.njk
+D  src/cv-teaching.njk
+D  src/cv.njk
+M  src/index.njk
+M  src/projects/curation-organization/phun-legacies-of-cybernetics/index.md
+M  src/projects/curation-organization/slomoco/index.md
+M  src/projects/installation-visual-art/differences-rainbow/index.md
+A  src/projects/installation-visual-art/portacular-resonances/gallery/vlcsnap-2022-05-25-11h16m14s715.png
+A  src/projects/installation-visual-art/portacular-resonances/gallery/vlcsnap-2022-05-25-11h25m05s367.png
+A  src/projects/installation-visual-art/portacular-resonances/gallery/vlcsnap-2022-05-25-11h26m50s742.png
+UU src/projects/installation-visual-art/portacular-resonances/index.md
+A  src/projects/installation-visual-art/portacular-resonances/thumbnail/install-wavepool.png
+M  src/projects/installation-visual-art/renao/index.md
+A  src/projects/installation-visual-art/renao/thumbnail/renao.png
+M  src/projects/installation-visual-art/the-gift/index.md
+A  src/projects/installation-visual-art/the-gift/thumbnail/gift2.png
+M  src/projects/installation-visual-art/thermal/index.md
+M  src/projects/performance/cello_electronics/index.md
+A  src/projects/performance/gulch/gallery/image.png
+A  src/projects/performance/gulch/gallery/image2.png
+M  src/projects/performance/gulch/index.md
+A  src/projects/performance/gulch/thumbnail/image.png
+M  src/projects/performance/hypergrace/index.md
+A  src/projects/performance/lanterns/thumbnail/lanterns.jpg
+A  src/projects/performance/lorkas/gallery/1236170.jpg
+A  src/projects/performance/lorkas/gallery/5328543.jpg
+A  src/projects/performance/lorkas/gallery/9510587.jpg
+A  src/projects/performance/lorkas/gallery/a1848311459_2.jpg
+A  src/projects/performance/lorkas/gallery/lorkas.png
+M  src/projects/performance/lorkas/index.md
+A  src/projects/performance/lorkas/thumbnail/lorkas.png
+M  src/projects/writing-research/imposters/index.md
+M  src/projects/writing-research/ntel/index.md
+?? status.txt
