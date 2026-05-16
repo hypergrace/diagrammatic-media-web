@@ -11,15 +11,11 @@ series: "music without organs"
 
 {% include "auto-gallery.njk" %}
 
-
 HYPERGRACE is my current live electronics performance project. For this project I writea and assembles software / hardware systems for performance with indeterminate logics aiming to create play in the unforeseeable unpredictabilities of the aesthetic event.
 
-The project blends ambient/drone stylings with idiosyncratic and percussive sampling and generative approaches to modern digital synthesis. I use a laptop to active with custom max/msp code in real-time and experiment with live gestural controllers and often with site-specific spatialization arrangements.
+The project blends ambient/drone stylings with idiosyncratic and percussive sampling and generative approaches to modern digital synthesis. I use a laptop to active with custom max/msp code in real-time and experiment with live gestural controllers and often with site-specific spatialization arrangements. I also use modular synthesizers which I often build from kits or design myself.
 
-
-
-## Performances 
-
+## Performances
 
 **2026 |** 16-channel live electronics. CLEAT series @ ELASTIC ARTS. Chicago IL.
 
@@ -31,9 +27,8 @@ The project blends ambient/drone stylings with idiosyncratic and percussive samp
 
 **2022 |** modular synthesis. Comfort Station. Chicago IL.
 
-## Documentation 
+## Documentation
 
 {% youtube "Urc3urucRFk" %}
 
 {% youtube "z_HuZTrrx_g" %}
-

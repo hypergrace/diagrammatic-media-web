@@ -2,7 +2,8 @@
 category: installation-visual-art
 title: Portacular Resonances
 layout: project.njk
-collaborators: Brandon Mechtley
+collaborators: 
+    - Brandon Mechtley
 subtitle: Heat-and-noise, urban media installation
 year : 2019
 date: 2018-01-02
@@ -11,6 +12,13 @@ header: renao.png
 series: alter-informatics and diagrammatic media
 ---
 
-
 **2019 |** _Idiotic Resonances_. Stadt Land Fluss. Berlin, DE. Media installation.
 
+media: raspberrypi, 3-channel video, 3-channel sound + haptic van seat
+
+### shows
+
+- Experimental Engagements: Happenings, University of California Irvine, 2019
+- Uncanny Valley, Wave Pool Gallery, Cincinnati Ohio, 2019
+
+{% youtube "LLjcZgxuLpQ" %}

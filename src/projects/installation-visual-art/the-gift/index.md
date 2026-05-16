@@ -7,17 +7,17 @@ tags: project
 year: 2020
 projecttags: "alternate-economies, workshop, responsive-media, collaboration, performance"
 header: gift1.
-collaborators: Muindi Fanuel Muindi, Ylfa Muindi, Brandon Mechtley
+collaborators: 
+- Muindi Fanuel Muindi
+- Ylfa Muindi 
+- Brandon Mechtley
 ---
 
-category: installation-visual-art
 A workshop and installation exploring alternate economies through interactive movement environments and digital stills.
-
 
 ### Gallery
 
 {% include "auto-gallery.njk" %}
-
 
 ### The Gift and the Ledger
 

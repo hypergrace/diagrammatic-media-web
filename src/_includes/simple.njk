@@ -33,7 +33,7 @@
           <div class="series-heading">{{ cat.label }}</div>
           <ol class="series-list">
             {%- for p in collections.project | sortByYearDesc -%}
-              {%- if p.data.category == cat.key -%}
+              {%- if p.data.category == cat.key and p.data.include != false -%}
                 <li><a href="{{ p.url }}">{{ p.data.title }}{% if p.data.year %} ({{ p.data.year }}){% endif %}</a></li>
               {%- endif -%}
             {%- endfor -%}

@@ -43,7 +43,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSEO, seo);
 
   // Add shortcode for responsive YouTube embeds
-  eleventyConfig.addShortcode("youtube", function(videoId) {
+  eleventyConfig.addShortcode("youtube", function (videoId) {
     return `<div class="youtube-embed">
       <iframe 
         src="https://www.youtube-nocookie.com/embed/${videoId}?modestbranding=1&rel=0&showinfo=0" 
@@ -55,25 +55,54 @@ module.exports = function (eleventyConfig) {
     </div>`;
   });
 
+  // Add shortcode for SoundCloud embeds
+  eleventyConfig.addShortcode("soundcloud", function (url, color = "ff5500") {
+    const encodedUrl = encodeURIComponent(url);
+    return `<div class="soundcloud-embed">
+      <iframe 
+        width="100%" 
+        height="166" 
+        scrolling="no" 
+        frameborder="no" 
+        allow="autoplay" 
+        src="https://w.soundcloud.com/player/?url=${encodedUrl}&color=%23${color}&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+      </iframe>
+    </div>`;
+  });
+
+  // Add shortcode for Vimeo embeds
+  eleventyConfig.addShortcode("vimeo", function (videoId, hash = "") {
+    const hashParam = hash ? `?h=${hash}` : "";
+    return `<div class="vimeo-embed">
+      <iframe 
+        title="vimeo-player" 
+        src="https://player.vimeo.com/video/${videoId}${hashParam}" 
+        frameborder="0" 
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>`;
+  });
+
   // Add shortcode for responsive images
-  eleventyConfig.addShortcode("image", function(src, alt = "") {
+  eleventyConfig.addShortcode("image", function (src, alt = "") {
     return `<div class="responsive-image">
       <img src="${src}" alt="${alt}" loading="lazy">
     </div>`;
   });
 
   // Add filter to convert hashtags to links
-  eleventyConfig.addFilter("linkifyHashtags", function(content) {
+  eleventyConfig.addFilter("linkifyHashtags", function (content) {
     if (!content) return content;
     // Match hashtags: # followed by alphanumeric, hyphens, or underscores
-    return content.replace(/#([\w-]+)/g, function(match, tag) {
-      const slug = tag.toLowerCase().replace(/_/g, '-');
+    return content.replace(/#([\w-]+)/g, function (match, tag) {
+      const slug = tag.toLowerCase().replace(/_/g, "-");
       return `<a href="/projects/${slug}/">#${tag}</a>`;
     });
   });
 
   // Sort projects by year descending (handles ranges like "2025-26", "2013-2015")
-  eleventyConfig.addFilter("sortByYearDesc", function(projects) {
+  eleventyConfig.addFilter("sortByYearDesc", function (projects) {
     const getEndYear = (y) => {
       if (!y) return 0;
       const parts = String(y).split(/[-\/]/);
@@ -82,8 +111,8 @@ module.exports = function (eleventyConfig) {
       if (last.length <= 2) return 2000 + n;
       return n;
     };
-    return [...projects].sort((a, b) =>
-      getEndYear(b.data.year) - getEndYear(a.data.year)
+    return [...projects].sort(
+      (a, b) => getEndYear(b.data.year) - getEndYear(a.data.year),
     );
   });
 

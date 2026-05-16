@@ -8,6 +8,7 @@ date: 2013-01-01
 projecttags: "spatial-audio,max-msp,ensemble,sound"
 ---
 
+{% include "auto-gallery.njk" %}
 
 From 2013 to 2015, I directed the student-led Laptop Orchestra of Arizona State. We created DIY and nomadic immersive media environments for the performance of member-composed pieces. As a group of five-fifteen, we performed extensively around Phoenix, Flagstaff, and even received funding to fly to Ames, IOWA to perform at a meeting of A2RU. My last major project as director was producing our only album, NODES, which we released as a cassette.
 
@@ -19,7 +20,7 @@ In groups of 5-15, we performed regularly around the Southwest including: the 20
 
 My compositions for laptop orchestra were also performed at the Cincinnati Contemporary Arts Center and in Athens, Ohio.
 
-<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1966175212/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://lorkas.bandcamp.com/album/nodes">nodes by LORKAS - Laptop Orchestra of Arizona State</a></iframe>
+<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1966175212/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://lorkas.bandcamp.com/album/nodes">nodes by LORKAS - Laptop Orchestra of Arizona State</a></iframe>
 
 {% youtube "6kAgL1y830Q" %}
 
@@ -32,3 +33,41 @@ My compositions for laptop orchestra were also performed at the Cincinnati Conte
 <div class = "vimeo"  style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/115950875?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="LORKAS - Sinken"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 <div  class = "vimeo" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/117120756?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="LORKAS - Gari"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+<!--
+5._.15 (Dates TBA) | SSOO art festival
+  @Firecreek Coffee, Flagstaff AZ
+4.14.15 - John Wiese w. LORKAS & friends
+  @ASU Tempe, location TBD.
+3.28.15 - TBA | Southwest Maker Fest 2015
+  @Downtown Mesa AZ
+2.28.15 - 16.00 | Night of the Open Door festival
+  @Stauffer B, Arts, Media + Engineering, ASU Tempe
+2.21.15 - 12.00-20.00 | Oh My Ears Experimental Music Marathon
+  @Trunk Space, Phoenix AZ, LORKAS @ 5pm
+2.13.15 - 19.30 | Phoenix Experimental Music Festival
+  @Glendale Community College, Glendale AZ
+1.20.15-1.23.15 | Networked Musics, open workshop w/ Tim Place
+   @iStage, Matthews Center, ASU Tempe
+12.10.14 - 19.30 | Digital Culture Hybrid Ensembles
+   @Mesa Arts Center, Mesa AZ
+11.20.14 - 15.00, 19.30 | Southwestern Electronic Music Festival
+    workshop/performance w. Dr. Stephen David Beck
+   @ASU West, KIVA lecture hall
+11.7.14  - 16.15, 17.15 | A2RU 2014 national conference,      workshop/presentation @ ISU, Ames, Iowa
+5.7.14 - 20.00 | LORKAS w. members of ACME
+   @Digital Arts Ranch, ASU, Tempe AZ
+12.11.13 - 19.30 | w. Digital Culture's Hybrid Ensembles
+   @Mesa Arts Center, Mesa AZ
+12.6.13 - 19.30 | ACME concert, Matthew Burtner's Cloudprints
+3.2.13 - 15.00 | Emerge Festival Arizona State University, Tempe AZ
+12.14.12 – 19.00 | LORKAS
+   @ Trunkspace, Phoenix AZ
+11.19.12 – 19.30 | Compositional Recital
+   @Katzin Recital Hall, ASU, Tempe AZ
+4.21.12 - 20.00 |  Seven Ate Nine #3 Special John Cage                            Extravaganza! w. D&spair Club, movement
+   @modified arts gallery, Phoenix AZ
+3.3.12 - 17.00 | Emerge Festival Arizona State University, Tempe, AZ
+11.19.11 – 19.00 | w. Perry Cook | BBLLVL - Perry Cook (premiere)            @Digital Arts Ranch, Tempe AZ
+10.14.11 - 19.00 | Phoenix MakerFaire
+   @ Roosevelt Row, Phoenix AZ -->

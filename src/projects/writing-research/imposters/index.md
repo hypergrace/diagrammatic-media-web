@@ -8,6 +8,7 @@ tags: project
 collaborators: Anani Vasquez, Marina Basu, Tim Wells
 projecttags: "video-art, speculative-design, workshop, writing, organizational-praxis" 
 series: "institutional analysis"
+include: false
 ---
 
 category: writing-research

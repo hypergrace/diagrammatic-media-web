@@ -1,0 +1,116 @@
+
+> build
+> eleventy
+
+[11ty] Writing docs/student-work/index.html from ./src/student-work.njk
+[11ty] Writing docs/about/index.html from ./src/about.md (liquid)
+[11ty] Writing docs/before/index.html from ./src/before.md (liquid)
+[11ty] Writing docs/projects/phun/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/alternate-economies/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/alternative-economies/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/ambient/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/analog-electronics/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/arduino/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/artist-book/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/carlos-reygadas/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/ccam/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/co-prosperity-sphere/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/collaboration/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/conference/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/cooperative-economies/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/creative-coding/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/critical-theory/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/cryptocurrency/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/cultural-geography/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/cybernetics/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/daisy/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/dance/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/dissertation/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/ecology/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/education/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/electronics-faire/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/embodiment/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/ensemble/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/essay/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/eurorack/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/experimental-music/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/gen/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/generative-art/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/installation/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/interactive-dance/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/kinect/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/larp/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/live-electronics/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/live-processing/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/magic/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/max-msp/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/maxmsp/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/media-arts-and-sciences/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/media-theory/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/movement-and-computing/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/neurodiversity/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/new-materialism/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/organization/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/organizational-praxis/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/p5.js/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/pedagogy/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/perception/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/performance/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/phd/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/post-human-network/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/posthumanities/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/process/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/processing/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/projection/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/ray-wilson/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/research/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/responsive-media/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/risograph/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/sigil-magic/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/sigils/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/soldering/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/sound/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/spatial-audio/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/spatial-sound/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/speculative-design/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/stable-diffusion/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/symposia/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/synthesizers/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/technology/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/video-art/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/whitehead/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/workshop/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/projects/writing/index.html from ./src/hashtag-pages.njk
+[11ty] Writing docs/news/index.html from ./src/news.md (liquid)
+[11ty] Writing docs/index.html from ./src/index.njk
+[11ty] Writing docs/now/index.html from ./src/now.md (liquid)
+[11ty] Writing docs/projects/index.html from ./src/projects.njk
+[11ty] Writing docs/projects/installation-visual-art/differences-rainbow/index.html from ./src/projects/installation-visual-art/differences-rainbow/index.md (liquid)
+[11ty] Writing docs/projects/installation-visual-art/post-tenebras-lux/index.html from ./src/projects/installation-visual-art/post-tenebras-lux/index.md (liquid)
+[11ty] Writing docs/projects/installation-visual-art/portacular-resonances/index.html from ./src/projects/installation-visual-art/portacular-resonances/index.md (liquid)
+[11ty] Writing docs/projects/installation-visual-art/solar-winds/index.html from ./src/projects/installation-visual-art/solar-winds/index.md (liquid)
+[11ty] Writing docs/projects/installation-visual-art/renao/index.html from ./src/projects/installation-visual-art/renao/index.md (liquid)
+[11ty] Writing docs/projects/installation-visual-art/tactical-finance/index.html from ./src/projects/installation-visual-art/tactical-finance/index.md (liquid)
+[11ty] Writing docs/projects/curation-organization/phun-learning-and-trust/index.html from ./src/projects/curation-organization/phun-learning-and-trust/index.md (liquid)
+[11ty] Writing docs/projects/installation-visual-art/thermal/index.html from ./src/projects/installation-visual-art/thermal/index.md (liquid)
+[11ty] Writing docs/projects/installation-visual-art/the-gift/index.html from ./src/projects/installation-visual-art/the-gift/index.md (liquid)
+[11ty] Writing docs/projects/curation-organization/phun-experiencing-the-posthuman/index.html from ./src/projects/curation-organization/phun-experiencing-the-posthuman/index.md (liquid)
+[11ty] Writing docs/projects/curation-organization/phun-posthuman-politics/index.html from ./src/projects/curation-organization/phun-posthuman-politics/index.md (liquid)
+[11ty] Writing docs/projects/curation-organization/phun-legacies-of-cybernetics/index.html from ./src/projects/curation-organization/phun-legacies-of-cybernetics/index.md (liquid)
+[11ty] Writing docs/projects/curation-organization/slomoco/index.html from ./src/projects/curation-organization/slomoco/index.md (liquid)
+[11ty] Writing docs/projects/curation-organization/ssoo/index.html from ./src/projects/curation-organization/ssoo/index.md (liquid)
+[11ty] Writing docs/projects/synthesizers/alien-screamer/index.html from ./src/projects/synthesizers/alien-screamer/index.md (liquid)
+[11ty] Writing docs/projects/performance/cello_electronics/index.html from ./src/projects/performance/cello_electronics/index.md (liquid)
+[11ty] Writing docs/projects/synthesizers/concrete-mixer/index.html from ./src/projects/synthesizers/concrete-mixer/index.md (liquid)
+[11ty] Writing docs/projects/performance/gulch/index.html from ./src/projects/performance/gulch/index.md (liquid)
+[11ty] Writing docs/projects/performance/iwantanai/index.html from ./src/projects/performance/iwantanai/index.md (liquid)
+[11ty] Writing docs/projects/performance/hypergrace/index.html from ./src/projects/performance/hypergrace/index.md (liquid)
+[11ty] Writing docs/projects/performance/lorkas/index.html from ./src/projects/performance/lorkas/index.md (liquid)
+[11ty] Writing docs/projects/performance/lanterns/index.html from ./src/projects/performance/lanterns/index.md (liquid)
+[11ty] Writing docs/projects/performance/visible-sketch/index.html from ./src/projects/performance/visible-sketch/index.md (liquid)
+[11ty] Writing docs/projects/writing-research/diagrammatic-media/index.html from ./src/projects/writing-research/diagrammatic-media/index.md (liquid)
+[11ty] Writing docs/projects/writing-research/how-to-see-in-the-dark/index.html from ./src/projects/writing-research/how-to-see-in-the-dark/index.md (liquid)
+[11ty] Writing docs/projects/writing-research/imposters/index.html from ./src/projects/writing-research/imposters/index.md (liquid)
+[11ty] Writing docs/projects/writing-research/symbols-signals-sigils/index.html from ./src/projects/writing-research/symbols-signals-sigils/index.md (liquid)
+[11ty] Writing docs/projects/writing-research/ntel/index.html from ./src/projects/writing-research/ntel/index.md (liquid)
+[11ty] Copied 404 files / Wrote 111 files in 1.29 seconds (11.6ms each, v2.0.1)

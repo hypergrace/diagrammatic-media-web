@@ -8,6 +8,7 @@ collaborators: Sha Xin Wei, Kenneth Mims, Mirka Koro, Anani Vasquez, Tim Wells
 layout: project.njk
 projecttags: "research,education,collaboration,neurodiversity,technology,pedagogy"
 series: learning praxis
+include: false
 ---
 
 category: writing-research

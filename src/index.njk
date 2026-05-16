@@ -13,7 +13,7 @@ title: grace grace grace
 
 {%- set allTags = [] -%}
 {%- for p in collections.project -%}
-  {%- if p.data.projecttags -%}
+  {%- if p.data.include != false and p.data.projecttags -%}
     {%- set parts = p.data.projecttags.split(',') -%}
     {%- for t in parts -%}
       {%- set clean = t.trim() -%}
@@ -43,17 +43,19 @@ title: grace grace grace
 <div id="grid-loader">loading&hellip;</div>
 <div class="portfolio-grid">
   {%- for p in collections.project | reverse -%}
-    {%- set urlParts = p.url.split('/') -%}
-    {%- set slug = urlParts[3] -%}
-    {%- set thumb = projectThumbnails[slug] -%}
-    <a href="{{ p.url }}" class="portfolio-item" data-category="{{ p.data.category }}" data-tags="{{ p.data.projecttags }}">
-      {%- if thumb -%}
-        <img src="{{ thumb }}" alt="{{ p.data.title }}" loading="lazy">
-      {%- else -%}
-        <div class="thumb-placeholder"></div>
-      {%- endif -%}
-      <div class="portfolio-title">{{ p.data.title }}{% if p.data.year %} <span class="portfolio-year">({{ p.data.year }})</span>{% endif %}</div>
-    </a>
+    {%- if p.data.include != false -%}
+      {%- set urlParts = p.url.split('/') -%}
+      {%- set slug = urlParts[3] -%}
+      {%- set thumb = projectThumbnails[slug] -%}
+      <a href="{{ p.url }}" class="portfolio-item" data-category="{{ p.data.category }}" data-tags="{{ p.data.projecttags }}">
+        {%- if thumb -%}
+          <img src="{{ thumb }}" alt="{{ p.data.title }}" loading="lazy">
+        {%- else -%}
+          <div class="thumb-placeholder"></div>
+        {%- endif -%}
+        <div class="portfolio-title">{{ p.data.title }}{% if p.data.year %} <span class="portfolio-year">({{ p.data.year }})</span>{% endif %}</div>
+      </a>
+    {%- endif -%}
   {%- endfor -%}
 </div>
 
@@ -77,8 +79,8 @@ title: grace grace grace
   /* ---- masonry ---- */
   function numCols() {
     var w = window.innerWidth;
-    if (w <= 480) return 1;
-    if (w <= 720) return 2;
+    if (w <= 640) return 1;
+    if (w <= 1440) return 2;
     return 3;
   }
 

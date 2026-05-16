@@ -1,0 +1,123 @@
+meta:
+  location: "lives and works between Chicago IL and New York"
+  website: "https://diagrammatic.media"
+  email: "grace@diagrammatic.media"
+  updated: "May 10 2026"
+
+background:
+  title: "BACKGROUND"
+  blocks:
+    - title: "ACADEMIC EMPLOYMENT"
+      style: "timeline"
+      items:
+        - when: "2021-present"
+          text: "Lecturer. Art Technology and Sound Practices department. School of the Art Institute of Chicago."
+          tags: [core, teaching]
+          highlight: true
+        - when: "2023-present"
+          text: "Adjunct Assistant Professor. New Media Art area. School of Art and Art History, University of Illinois Chicago."
+          tags: [core, teaching]
+          highlight: true
+        - when: "2024-2025"
+          text: "Post-Doctoral Researcher. Leonardo/ISAST."
+          tags: [core, research]
+        - when: "2021"
+          text: "Adjunct Assistant Professor. New Media Art area. School of Art, SUNY Purchase."
+          tags: [core, teaching]
+    - title: "EDUCATION"
+      style: "timeline"
+      items:
+        - when: "2015-2022"
+          text: "Ph.D. in Media Arts and Sciences. Diagrammatic Media: Subjectivity, Ecology, and Event. School of Arts, Media, and Engineering, Arizona State University."
+          tags: [core, research, teaching]
+          highlight: true
+        - when: "2012-2015"
+          text: "M.A. Musicology. Arizona State University."
+          tags: [core]
+        - when: "2007-2012"
+          text: "B.Music in Music History and Literature with German minor. Ohio University."
+          tags: [core]
+    - title: "OTHER"
+      style: "timeline"
+      items:
+        - when: "2018"
+          text: "Critical Theory Certificate. Arizona State University."
+          tags: [core, research]
+        - when: "2011-2012"
+          text: "DAAD. University of Leipzig. Institut fuer Musikwissenschaft and Sprachenzentrum Leipzig."
+          tags: [core, cycling]
+
+teaching:
+  title: "TEACHING EXPERIENCE"
+  blocks:
+    - title: "SCHOOL OF THE ART INSTITUTE OF CHICAGO 2021-now"
+      style: "bullet"
+      items:
+        - text: "5000 // Chaosmotic Systems: Chaos, Culture and Computation [Seminar]"
+          tags: [core, teaching]
+          highlight: true
+        - text: "4000 // Anxious Media Ecologies: Anxiety and/as a Technology of Resistance [Seminar]"
+          tags: [core, teaching]
+        - text: "3000 // Money Moves: (Post-)Capitalist Sorcery [Studio]"
+          tags: [core, teaching]
+        - text: "3000 // Web Art [Professional Practice]"
+          tags: [core, teaching]
+    - title: "UNIVERSITY OF ILLINOIS CHICAGO 2023-now"
+      style: "bullet"
+      items:
+        - text: "500 // Sensations, Visions, and Dreams for a New Weird Anthropocene [Seminar]"
+          tags: [core, teaching]
+        - text: "200 // More-than-human Sonic Ecologies: DIY Hardware/Software for Sound Performance and Installation [Studio]"
+          tags: [core, teaching]
+        - text: "100 // Introduction to Creative Coding for New Media [Studio]"
+          tags: [core, teaching]
+    - title: "ARIZONA STATE UNIVERSITY"
+      style: "bullet"
+      items:
+        - text: "400 // Heterotopian Responsive Media Environments [Seminar/Studio]"
+          tags: [core, teaching]
+        - text: "100 // Intro to Digital Culture"
+          tags: [core, teaching]
+
+funding:
+  title: "FUNDING, FELLOWSHIPS, AND DISTINCTIONS"
+  blocks:
+    - title: "HONORS AND AWARDS"
+      style: "timeline"
+      items:
+        - when: "2024"
+          text: "Dean's Award, College of Arts and Design, University of Illinois Chicago."
+          tags: [core, honors]
+          highlight: true
+        - when: "2022"
+          text: "Outstanding Graduate Award, Herberger Institute of Design and the Arts, Arizona State University."
+          tags: [core, honors]
+        - when: "2020"
+          text: "Teaching Excellence Award, Arizona State University."
+          tags: [core, honors, teaching]
+    - title: "FELLOWSHIPS"
+      style: "timeline"
+      items:
+        - when: "2025"
+          text: "AI Working Group. Center for Teaching and Learning, School of the Art Institute of Chicago. $2000."
+          tags: [core, research]
+        - when: "2019-20"
+          text: "Graduate College Fellowship. Arizona State University. $10,000."
+          tags: [core, research]
+        - when: "2011-12"
+          text: "Undergraduate Stipendium. Deutsche Akademische Austauschdienst (DAAD). 16,500 Euro."
+          tags: [core, cycling]
+    - title: "RESEARCH/PRACTICE FUNDING"
+      style: "timeline"
+      items:
+        - when: "2025"
+          text: "Co-Prosperity Sphere. How to See in the Dark gallery exhibition and interdisciplinary symposium. $2,500."
+          tags: [core, research]
+          highlight: true
+        - when: "2024"
+          text: "Artist-Run Chicago Fund plus Art Design Chicago and Hyde Park Art Center. Center for Concrete and Abstract Machines and FUTURHYTHMACHINES Chicago House. $12,000."
+          tags: [core, research]
+        - when: "2021-2025"
+          text: "Research Practice Partnership on creative computational thinking. Project award #2122924. Project co-founder and graduate researcher. $998,712."
+          tags: [core, research]
+          highlight: true
