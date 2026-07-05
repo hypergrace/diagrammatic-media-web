@@ -70,19 +70,29 @@ module.exports = function (eleventyConfig) {
     </div>`;
   });
 
-  // Add shortcode for Vimeo embeds
-  eleventyConfig.addShortcode("vimeo", function (videoId, hash = "") {
-    const hashParam = hash ? `?h=${hash}` : "";
-    return `<div class="vimeo-embed">
+  // Add shortcode for responsive Vimeo embeds
+  // Usage: {% vimeo "216553103", "99d332195f", "16:9", "Lanterns performance" %}
+  eleventyConfig.addShortcode(
+    "vimeo",
+    function (videoId, hash = "", aspect = "16:9", title = "Vimeo video") {
+      const hashParam = hash ? `?h=${hash}` : "";
+      const aspectRatio =
+        typeof aspect === "string" && aspect.includes(":")
+          ? aspect.replace(":", " / ")
+          : "16 / 9";
+      const safeTitle = String(title).replace(/"/g, "&quot;");
+
+      return `<div class="vimeo-embed" style="--embed-aspect-ratio: ${aspectRatio};">
       <iframe 
-        title="vimeo-player" 
+        title="${safeTitle}" 
         src="https://player.vimeo.com/video/${videoId}${hashParam}" 
         frameborder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
         allowfullscreen>
       </iframe>
     </div>`;
-  });
+    },
+  );
 
   // Add shortcode for responsive images
   eleventyConfig.addShortcode("image", function (src, alt = "") {

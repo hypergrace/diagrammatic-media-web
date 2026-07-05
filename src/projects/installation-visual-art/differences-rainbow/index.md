@@ -8,6 +8,7 @@ layout: project.njk
 year: 2025
 series: "sigilistic perception"
 projecttags: "projection,processing,perception,writing,installation,sound,generative-art,p5.js,creative-coding,sound,max-msp"
+gallery_columns: 2
 ---
 
 category: installation-visual-art
@@ -16,6 +17,16 @@ media: real-time javascript code, real-time max/msp code, desktop computer, orga
 exhibitions: [Anthropocene Consequences](https://ac-chicago.org/) at [Watershed Art and Ecology](https://watershed-art.org/), curated by Claire Pentecost and Brian Holmes. November 2025.
 
 {% youtube "t6kOaeNxz7Q" %}
+
+{% include "auto-gallery.njk" %}
+
+## Sound Composition
+
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2353196402&color=%230d0a08&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2353195202&color=%23282a2a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+
 
 ## Essay
 
