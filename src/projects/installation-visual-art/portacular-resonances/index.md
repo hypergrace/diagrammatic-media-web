@@ -12,7 +12,7 @@ header: renao.png
 series: alter-informatics and diagrammatic media
 ---
 
-media: (2) raspberry-pis, (3) video monitors, (2) amplifiers, (2) haptic motors, (3) custom directional speaker domes, (1) found van seat, wood, steel, acrylic 
+media: electromagnetic fluctuations, Max/MSP/Jitter, car radio recordings, GoPro recordings, two raspberry-pis, three video monitors, three amplifiers + power supplies, two haptic motors, three custom directional speaker domes, found van seat, wood, steel, acrylic 
 
 ### Statement 
 

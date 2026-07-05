@@ -16,9 +16,25 @@ headshot: /assets/headers/img/headshot.png
 
     <section class="about-card">
     	<h2>artist statement</h2>
-    	<p>I am an installation and performance artist working with real-time sonic and visual computational media. I create art foregrounding processes that challenge reactionary habits of thought and create new potentials for feeling, thinking, and acting with the non-human world.</p>
-        <p>My performance and installation work has been shown at the Kennedy Center, at Goldsmiths in London, The National Academy of Sciences, and artist-run spaces across the US. In the next five years I want to continue recent work developing custom hardware and speakers that allows my sound work to have a larger physical extension</p>
-    	<p>I am interested in experiential media (sound, projection, light) because of their ability to take us out of what we thought we knew about the world and into the present unfolding of reality. I develop my own hardware and software because it allows for audiences to experience unfamiliar blocks of time and texture that cut across human gesturality and non-human rhythmicity and expressivity.</p>
+    <p>I am a queer installation and performance artist working with real-time sonic,
+visual, and haptic digital and analog computational media. My work deals with
+themes of countercultural collectivity, more-than-human perception, and queer
+spirituality through the lens of non-linear chaotic systems and process-oriented
+philosophy.</p>
+<p>My creative practice with technology spans many genres, including large-scale
+sculptural installation, live electronics performance, interactive dance, multichannel
+sound sculpture, and analog/digital instrument design. I consider
+these works of experiential media art (sound, projection/video, light), skewing
+experience over immersion and encounter over spectacle to take us out of what
+we thought we knew about the world and into the present unfolding of reality.</p>
+<p>I create art foregrounding processes that challenge reactionary habits of thought
+and create new potentials for feeling, thinking, and acting with the non-human
+world. Working almost exclusively with live and real-time processing, I develop
+my own hardware and software because it allows for audiences to experience
+unfamiliar blocks of time and texture that cut across human gesturality and nonhuman
+rhythmicity and expressivity. These encounters aim to feed communities’
+cache of experience which encourage new ways of framing our moment and
+relating to each other.</p>
     </section>
     <section class="about-card">
     	<h2>teaching and organizing</h2>
