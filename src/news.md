@@ -4,7 +4,7 @@ title: NEWS
 permalink: /news/
 ---
 
-<nav class="season-nav">
+<!-- <nav class="season-nav">
   <a href="#spring-2026">Spring 2026</a>
   <a href="#fall-2025">Fall/Winter 2025–26</a>
   <a href="#summer-fall-2025">Summer/Fall 2025</a>
@@ -16,12 +16,32 @@ permalink: /news/
   <a href="#summer-2023">Summer 2023</a>
 </nav>
 
-<span id="now"></span>
+<span id="now"></span> -->
+# GRACE NEWS 
+
+## FALL 2026
+
+Hosting a [public workshop at Public Space One in Iowa City](https://www.publicspaceone.com/events/making-electricity-musical-with-modular-synthesis) with the Estuary Eurorack system I developed for CCAM. November. 
+
+Received a Mitchell Foundation Grant in support of exhibiting [Sigil 002](./projects/installation-visual-art/sigil-002/). November.  
+
+Traveling to Bogota, Colombia to show a new work, [Sigil 002](./projects/installation-visual-art/sigil-002/) and perform as [HYPERGRACE](./projects/performance/hypergrace/) at Voltaje Art and Technology Salon. November. 
+
+Organizing Processing Community Day in Chicago with Maddie Brucker and Cassie Tarakajian. Developing a collaborative workshop on the past, present, and future of art, technology, and culture in Chicago. October.
+
+CCAM School / ALAMANAC's workshop series continues through the Fall with offerings from Zoe Butler, SF-based group CODEMOVES, and Digital Maroonage.
+
+Teaching: an MFA seminar in Chaos Theory, Cybernetics, and Process Philosophy: [Chaosmotic Systems](https://practices.digital/saic/mfa5010).
+
+Teaching: a BFA studio [Introduction to Interactive Sound](https://practices.digital/uic/art151-interactive-sound) for performance and installation with MaxMSP.  
 
 ## SUMMER 2026
 
-I'm travelling to Detroit for the [2026 MDW Summit](https://mdw.art/summit), an intentional gathering of artist-run projects across the Midwest on behalf of [CCAM](https://ccam.world). June.
+Debuted a work-in-progress live desktop performance lecture [Spectral Truths](./projects/performance/spectral-truths/) with percussionist Avreayl Ra as part of Night School at Elastic Arts. July. 
 
+Tabled for CCAM at the [Experimental Garage Sale](https://ess.org/event/experimental-garage-sale-2026/) at the Experimental Sound Studio. July. 
+
+I'm travelling to Detroit for the [2026 MDW Summit](https://mdw.art/summit), an intentional gathering of artist-run projects across the Midwest on behalf of [CCAM](https://ccam.world). June.
 
 
 ## SPRING 2026
