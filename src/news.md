@@ -25,9 +25,9 @@ Hosting a [public workshop at Public Space One in Iowa City](https://www.publics
 
 Received a Mitchell Foundation Grant in support of exhibiting [Sigil 002](./projects/installation-visual-art/sigil-002/). November.  
 
-Traveling to Bogota, Colombia to show a new work, [Sigil 002](./projects/installation-visual-art/sigil-002/) and perform as [HYPERGRACE](./projects/performance/hypergrace/) at Voltaje Art and Technology Salon. November. 
+Traveling to Bogota, Colombia to show a new work, [Sigil 002](./projects/installation-visual-art/sigil-002/) and perform as [HYPERGRACE](./projects/performance/hypergrace/) at [Voltaje Art and Technology Salon](https://voltaje.co/el-salon/). November. 
 
-Organizing Processing Community Day in Chicago with Maddie Brucker and Cassie Tarakajian. Developing a collaborative workshop on the past, present, and future of art, technology, and culture in Chicago. October.
+Organizing [Processing Community Day](https://ccam.world/programs/26-10-processing-day/) in Chicago with Maddie Brucker and Cassie Tarakajian. Developing a collaborative workshop on the past, present, and future of art, technology, and culture in Chicago. October.
 
 CCAM School / ALAMANAC's workshop series continues through the Fall with offerings from Zoe Butler, SF-based group CODEMOVES, and Digital Maroonage.
 
