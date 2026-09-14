@@ -6,7 +6,6 @@ layout: project.njk
 tags: project
 year: 2026
 projecttags: "desktop performance"
-series: "music without organs"
 ---
 
 {% include "auto-gallery.njk" %}
@@ -17,4 +16,12 @@ For this performance, I created a retro desktop emulator that functions as a per
 
 I'm interested in the social temporality of David's question -- truths are propositions resounded through time. Half a decade after Leslie's passing, in the wake of my own coming out, I feel through latent resonances with his work which I can only call lower-case "truths" about life, death, and AIDS with ghosts-of-my-life-cum-queer-elders. I want to ask: what truths will you put forward to future generations? Who will you haunt? 
 
+
+## Documentation
+
 Performed 7.22.26 @ Elastic Arts in Chicago IL with live accompaniment by percussionist Avreayl Ra. 
+
+
+
+
+{% youtube "5c4qoo92C_w" %}

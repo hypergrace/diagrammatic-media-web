@@ -9,7 +9,9 @@ date: 2026-11-01
 projecttags: "custom-pcbs,synthesizers,c++,responsive-media,generative-sound,installation,speculative-design,process-philosophy"
 ---
 
-Work-in-progress to be exhibited November 2026 at [Voltaje Art and Technology Salon](https://voltaje.co/) in Bogota, Colombia. 
+Note, this work is in progress. 
+
+ To be November 2026 at [Voltaje Art and Technology Salon](https://voltaje.co/) in Bogota, Colombia. 
 
 ## Materials
 - Custom PCBs and interface components
