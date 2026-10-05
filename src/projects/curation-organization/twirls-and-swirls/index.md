@@ -13,7 +13,7 @@ links:
       link: https://elasticarts.org/
 ---
 
-{% include "auto-gallery.njk" %}
+<!-- {% include "auto-gallery.njk" %} -->
 
 
 

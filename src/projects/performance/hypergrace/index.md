@@ -17,6 +17,9 @@ The project blends ambient/drone stylings with idiosyncratic and percussive samp
 
 ## Performances
 
+
+**2026 |** 32-channel live electronics. [3rd Annual SPACEOUT International Ambisonics Festival](https://sites.google.com/umich.edu/spaceout/home). University of Michigan. Ann Arbor MI. 
+
 **2026 |** 16-channel live electronics. CLEAT series @ ELASTIC ARTS. Chicago IL.
 
 **2025 |** ambient modular and live electronics. THRESHOLD. Curated by Claire Fleming Staples. Almanac Project Space. Chicago IL.
