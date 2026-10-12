@@ -1,9 +1,38 @@
+@page {
+  size: letter;
+  margin: 0.75in 0.8in;
+}
+
 body {
   font-family: "Space Mono", monospace;
   font-weight: 400;
   font-size: small;
+  line-height: 1.45;
 }
 
+/* Section rules: a visible divider, not a forced page break.
+   (Forced breaks left near-empty pages and a blank page.) */
 hr {
-  break-before: page;
+  break-before: auto;
+  border: 0;
+  border-top: 1px solid #999;
+  margin: 1.6em 0 1.2em;
+}
+
+/* Keep headings with the text that follows them */
+h1, h2, h3, h4, h5 {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* Don't split a single CV entry or list item across pages */
+p, li {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  orphans: 3;
+  widows: 3;
+}
+
+a {
+  color: inherit;
 }
