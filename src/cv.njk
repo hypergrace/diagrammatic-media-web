@@ -1,0 +1,13 @@
+---
+layout: base.njk
+title: CURRICULUM VITAE
+date: 2024-10-06
+---
+
+<link rel="stylesheet" href="/css/cv.css" />
+
+<button style = "position: relative;float:right"><a href = "/cv-print">printable</a></button>
+
+<div class="cv">
+{% renderFile "src/_includes/cvdata.njk" %}
+</div>
