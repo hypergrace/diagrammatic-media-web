@@ -16,3 +16,5 @@ projecttags: "research,ai,media-theory,media-arts-and-sciences-,writing,ecology,
 ## Conversation with Eva Davidova: "Counterprediction and Compassion: Tactics Beyond the Inscrutability of AI"
 
 Appearing in [AI HALFTIME - Becoming Human Through Art](https://www.dieangewandte.at/aktuell/publikationen/publikation_detail?publikation_id=1791427337568), edited by Zeynep Aksöz & Margarete Jahrmann. Published by De Gruyter, Edition Angwande (University of Applied Arts Vienna). Forthcoming December 2026.
+
+[PDF of publisher proof available here](src/assets/pdf/Eva-Davidova-GraceGraceGrace.pdf)
