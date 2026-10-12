@@ -1,9 +1,49 @@
+@page {
+  size: letter;
+  margin: 0.75in 0.8in 0.8in;
+  @bottom-right {
+    content: counter(page) " / " counter(pages);
+    font-family: "Space Mono", monospace;
+    font-size: 8pt;
+    color: #666;
+  }
+}
+
 body {
   font-family: "Space Mono", monospace;
   font-weight: 400;
-  font-size: small;
+  color: #111;
 }
 
-hr {
-  break-before: page;
+/* Print sizes: compact but readable */
+.cv {
+  max-width: none;
+  font-size: 9.25pt;
+  line-height: 1.5;
 }
+main > h2 {
+  font-size: 13pt;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.4em;
+}
+
+/* Section rules are dividers, not forced page breaks
+   (forced breaks left near-empty and blank pages). */
+.cv hr {
+  break-before: auto;
+  margin: 1.4em 0 0.8em;
+}
+
+/* Keep headings with what follows; don't split an entry */
+.cv h1, .cv h2, .cv h3, .cv h4, .cv h5 {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.cv p, .cv li {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  orphans: 3;
+  widows: 3;
+}
+
+.cv a { color: inherit; text-decoration: none; }
